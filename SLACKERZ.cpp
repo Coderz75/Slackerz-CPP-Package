@@ -1,3 +1,7 @@
+//Versinon: 1.0
+//Source: https://github.com/Coderz75/Slackerz-Compiler
+//This code will not automatically update, you must manually re-download the files. 
+
 #include <iostream>
 #include<string>
 using namespace std;
