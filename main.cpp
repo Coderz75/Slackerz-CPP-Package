@@ -1,33 +1,15 @@
 #include <iostream>
+#include "runner.h"
 #include<string>
 using namespace std;
-// print
-void prints(string print){
-  std::cout << print + "\n";
-}
-void printn(float number){
-  cout << to_string(number) + "\n";
-}
 
-//CONVERSIONS
-//To int
 
-int fint(float number){
-  return (int)number;
-}
-int sint(string something){
-  return stoi(something);
-}
-
-//to string
-
-string nums(float num){
-  return to_string(num);
-}
-
-string input(string ask){
-  string x;
-  cout << ask;
-  cin >> x;
-  return x;
+int main() {
+  prints("Hello");
+  printn(50.3434);
+  printn(fint(3544.2432));
+  printn(sint("1"));
+  prints(nums(1));
+  string bob = input("Type your name: ");
+  prints("Hello " + bob);
 }
