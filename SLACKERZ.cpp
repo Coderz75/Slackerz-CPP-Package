@@ -39,6 +39,10 @@ string nums(float num){
   return to_string(num);
 }
 
+string is(int num){
+  return to_string(num);
+}
+
 string input(std::string ask){
   string x;
   cout << ask;
@@ -62,4 +66,21 @@ std::vector<std::string>  split(string a, string x){
 
     so.push_back(s.substr(start, end));
     return so;
+}
+
+std::vector<string> range(int num){
+  std::vector<string> so {};
+  int i = num-1;
+  while(i != 0){ 
+    so.push_back(is(i));
+    if (0>i){
+      i = i+1;
+    }else{
+      i = i-1;
+    }
+    
+  }
+  so.push_back(is(i));
+  reverse(so.begin(), so.end());
+  return so;
 }

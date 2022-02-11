@@ -23,4 +23,6 @@ int main() {
     //tests split and vector
     std::vector<string> a = split("a=b=c", "=");
     printv(a);
+    printv(range(5));
+    
 }
