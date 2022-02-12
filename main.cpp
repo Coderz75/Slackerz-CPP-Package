@@ -1,9 +1,6 @@
 #include <iostream>
 #include "runner.h"
-#include <sstream>
 #include<string>
-#include <list>
-#include <algorithm>
 #include <vector>
 using namespace std;
 
@@ -11,18 +8,34 @@ using namespace std;
 
 int main() {
     //tests prints and printn
-    prints("Hello");
-    printn(50.3434);
+    //print("Hello");
+    //print(50.3434);
     //tests conversions
-    printn(fint(3544.2432));
-    printn(sint("1"));
-    prints(nums(1));
+    //printn(fint(3544.2432));
+    //printn(sint("1"));
+    //print(nums(1));
     //tests input
-    string bob = input("Type your name: ");
-    prints("Hello " + bob);
+    //string bob = input("Type your name: ");
+    //print("Hello " + bob);
     //tests split and vector
-    std::vector<string> a = split("a=b=c", "=");
-    printv(a);
-    printv(range(5));
+    //std::vector<string> a = split("a=b=c", "=");
+    //printv(a);
+    //printv(range(5));
+    //string bom = input("COMO ESTAS: ");
+    //print(bom);
+
+    //more tests
     
-}
+    //string como = input("HOLA COMO ESTAS ");
+    //print(como);
+    //if(como == "SOY DORA"){
+      //print("NOOOOOOOOOOo");
+      //print("oogley");
+    //}
+    
+
+
+
+
+
+}   

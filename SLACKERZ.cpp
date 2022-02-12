@@ -3,15 +3,13 @@
 //This code will not automatically update, you must manually re-download the files.
 //Branch: test [unstable]
 #include <iostream>
-#include <sstream>
 #include<string>
-#include <list>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
 // print
-void prints(std::string print){
+void print(std::string print){
   std::cout << print + "\n";
 }
 void printn(float number){
@@ -46,7 +44,7 @@ string is(int num){
 string input(std::string ask){
   string x;
   cout << ask;
-  cin >> x;
+  getline(cin, x);
   return x;
 }
 

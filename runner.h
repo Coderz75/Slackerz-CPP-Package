@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void prints(std::string);
+void print(std::string);
 void printn(float number);
 int fint(float number);
 
