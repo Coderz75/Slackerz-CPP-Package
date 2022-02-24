@@ -6,7 +6,11 @@
 #include<string>
 #include <algorithm>
 #include <vector>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xos.h>
 using namespace std;
+
 
 // print
 void print(std::string print){
@@ -81,4 +85,9 @@ std::vector<string> range(int num){
   so.push_back(is(i));
   reverse(so.begin(), so.end());
   return so;
+}
+
+int random(int num){
+  int a = rand() % num;
+  return a;
 }

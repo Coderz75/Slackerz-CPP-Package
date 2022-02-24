@@ -20,3 +20,7 @@ void printv(std::vector<std::string> a);
 std::vector<std::string> range(int num);
 
 std::string is(int num);
+
+//
+
+int random(int thing);

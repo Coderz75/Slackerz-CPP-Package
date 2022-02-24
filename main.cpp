@@ -32,6 +32,10 @@ int main() {
       //print("NOOOOOOOOOOo");
       //print("oogley");
     //}
+    //printn(random(34));
+
+    print("EVERYTHING WORKS FINE");
+  
     
 
 
