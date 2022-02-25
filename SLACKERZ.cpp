@@ -1,18 +1,16 @@
-
-//Versinon: 2.0
-//Source: https://github.com/Coderz75/Slackerz-Compiler/
+//Version: 3.0
+//Source: https://github.com/Coderz75/Slackerz-Compiler/tree/test
 //This code will not automatically update, you must manually re-download the files.
 //Branch: main [stable]
 #include <iostream>
-#include <sstream>
 #include<string>
-#include <list>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
+
 // print
-void prints(std::string print){
+void print(std::string print){
   std::cout << print + "\n";
 }
 void printn(float number){
@@ -40,10 +38,14 @@ string nums(float num){
   return to_string(num);
 }
 
+string is(int num){
+  return to_string(num);
+}
+
 string input(std::string ask){
   string x;
   cout << ask;
-  cin >> x;
+  getline(cin, x);
   return x;
 }
 
@@ -63,4 +65,38 @@ std::vector<std::string>  split(string a, string x){
 
     so.push_back(s.substr(start, end));
     return so;
+}
+
+std::vector<string> range(int num){
+  std::vector<string> so {};
+  int i = num-1;
+  while(i != 0){ 
+    so.push_back(is(i));
+    if (0>i){
+      i = i+1;
+    }else{
+      i = i-1;
+    }
+    
+  }
+  so.push_back(is(i));
+  reverse(so.begin(), so.end());
+  return so;
+}
+
+int random(int num){
+  int a = rand() % num;
+  return a;
+}
+
+string cstr(char a){
+    char l = a;
+    string f;
+    f.push_back(l);
+    return f;
+}
+
+void init_slackerz(){
+    ios::sync_with_stdio(0); 
+    cin.tie(0);
 }
