@@ -1,13 +1,18 @@
+#include <iostream>//required
+#include "runner.h" //required
+#include<string> //optional, but reccomended
+using namespace std; //optional, but reccomended
 
-#include <iostream>
-#include "runner.h"
-#include <sstream>
-#include<string>
-#include <list>
-#include <algorithm>
-#include <vector>
-using namespace std;
+
 
 int main() {
-  //Enter code here with
-}
+    init_slackerz(); // initilizes slackerz - speeds up certain functions
+
+    print("WELCOME TO SLACKERZ");
+    
+
+
+
+
+
+}   
