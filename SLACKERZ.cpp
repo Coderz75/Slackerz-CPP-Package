@@ -5,10 +5,8 @@
 #include <iostream>
 #include<string>
 #include <algorithm>
+#include <stdio.h>
 #include <vector>
-#include <X11/Xlib.h>
-#include <X11/Xutil.h>
-#include <X11/Xos.h>
 using namespace std;
 
 
@@ -90,4 +88,16 @@ std::vector<string> range(int num){
 int random(int num){
   int a = rand() % num;
   return a;
+}
+
+string cstr(char a){
+    char l = a;
+    string f;
+    f.push_back(l);
+    return f;
+}
+
+void init_slackerz(){
+    ios::sync_with_stdio(0); 
+    cin.tie(0);
 }

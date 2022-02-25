@@ -7,6 +7,7 @@ using namespace std;
 
 
 int main() {
+    init_slackerz();
     //tests prints and printn
     //print("Hello");
     //print(50.3434);

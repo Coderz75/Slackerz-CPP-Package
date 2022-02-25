@@ -24,3 +24,7 @@ std::string is(int num);
 //
 
 int random(int thing);
+
+std::string cstr(char a);
+
+void init_slackerz();
