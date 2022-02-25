@@ -1,8 +1,7 @@
-
 #include <iostream>
 #include <vector>
 
-void prints(std::string);
+void print(std::string);
 void printn(float number);
 int fint(float number);
 
@@ -17,3 +16,15 @@ std::string input(std::string ask);
 std::vector<std::string> split(std::string a, std::string x);
 
 void printv(std::vector<std::string> a);
+
+std::vector<std::string> range(int num);
+
+std::string is(int num);
+
+//
+
+int random(int thing);
+
+std::string cstr(char a);
+
+void init_slackerz();
