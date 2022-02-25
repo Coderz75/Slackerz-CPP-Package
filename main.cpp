@@ -36,7 +36,6 @@ int main() {
     //printn(random(34));
 
     print("EVERYTHING WORKS FINE");
-  
     
 
 
