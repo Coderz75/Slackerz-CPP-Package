@@ -4,8 +4,6 @@
 //Branch: test [unstable]
 #include <iostream>
 #include<string>
-#include <algorithm>
-#include <stdio.h>
 #include <vector>
 using namespace std;
 
