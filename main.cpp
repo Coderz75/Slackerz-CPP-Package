@@ -35,10 +35,17 @@ int main() {
     //}
     //printn(random(34));
 
-    print("EVERYTHING WORKS FINE");
-    
-
-
+    print("HOYA COMO ESATS");
+    string hello = input("whos dora ");
+    if (hello == "me"){
+      print("no");
+    }else{
+      print("YOU ARE A FAILURE, EMOTIONAL DAMAGE!!!");
+    }
+    string s = input("");
+    clear();
+    print("a");
+      
 
 
 

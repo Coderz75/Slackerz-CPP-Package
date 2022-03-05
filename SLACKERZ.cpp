@@ -6,24 +6,9 @@
 #include<string>
 #include <algorithm>
 #include <vector>
+#include <pthread.h>
+#include <thread>
 using namespace std;
-
-
-// print
-void print(std::string print){
-  std::cout << print + "\n";
-}
-void printn(float number){
-  cout << to_string(number) + "\n";
-}
-
-void printv(std::vector<string> a){
-    for(int i=0; i < a.size(); i++)
-    std::cout << a.at(i) << '\n';
-}
-
-//CONVERSIONS
-//To int
 
 int fint(float number){
   return (int)number;
@@ -31,6 +16,29 @@ int fint(float number){
 int sint(std::string something){
   return stoi(something);
 }
+
+
+
+// print
+void print(std::string print){
+    std::cout << print + "\n";
+    ios_base::sync_with_stdio(0);
+}
+void printn(float num){
+    cout << to_string(num) + "\n";
+    ios_base::sync_with_stdio(0);
+}
+
+void printv(std::vector<string> a){
+    for(int i=0; i < a.size(); i++)
+    std::cout << a.at(i) << '\n';
+    ios_base::sync_with_stdio(0);
+}
+
+//CONVERSIONS
+//To int
+
+
 
 //to string
 
@@ -95,8 +103,22 @@ string cstr(char a){
     f.push_back(l);
     return f;
 }
+void turnOffSync(){
+    ios_base::sync_with_stdio(0);
+}
+void turnOnSync(){
+    ios_base::sync_with_stdio(1);
+}
+
+void clear(){
+    ios_base::sync_with_stdio(1);
+    printf("\033c");
+}
+
 
 void init_slackerz(){
-    ios::sync_with_stdio(0); 
-    cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    clear();
+    const auto processor_count =  thread::hardware_concurrency();
+    pthread_t threads[processor_count];
 }
