@@ -111,8 +111,8 @@ void turnOnSync(){
 }
 
 void clear(){
-    ios_base::sync_with_stdio(1);
-    printf("\033c");
+    
+    std::cout<< u8"\033[2J\033[1;1H"; 
 }
 
 
