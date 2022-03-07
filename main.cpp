@@ -1,5 +1,5 @@
 #include <iostream>
-#include "runner.h"
+#include "slackerz/all.h"
 #include<string>
 #include <vector>
 using namespace std;
@@ -35,18 +35,7 @@ int main() {
     //}
     //printn(random(34));
 
-    print("HOYA COMO ESATS");
-    string hello = input("whos dora ");
-    if (hello == "me"){
-      print("no");
-    }else{
-      print("YOU ARE A FAILURE, EMOTIONAL DAMAGE!!!");
-    }
-    string s = input("");
-    clear();
-    print("a");
-      
-
+    print("EVERYTHING WORKS FINE");
 
 
 }   

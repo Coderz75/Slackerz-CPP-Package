@@ -7,7 +7,6 @@
 #include <algorithm>
 #include <vector>
 #include <pthread.h>
-#include <thread>
 using namespace std;
 
 int fint(float number){
@@ -117,8 +116,7 @@ void clear(){
 
 
 void init_slackerz(){
+    pthread_t threads[2];
     ios_base::sync_with_stdio(0);
     clear();
-    const auto processor_count =  thread::hardware_concurrency();
-    pthread_t threads[processor_count];
 }

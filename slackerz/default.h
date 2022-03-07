@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 void print(std::string); //prints string
 void printn(float number);//prints float
 int fint(float number); //floats to int
@@ -28,10 +27,4 @@ int random(int thing); //random
 std::string cstr(char a); //char to string
 
 void init_slackerz(); //initilizes slackerz
-
-void clear(); //clears console (NOT IN PYTHON)
-
-void turnOffSync(); //turns of sync (default)
-
-void turnOnSync(); //turns on sync
 
