@@ -6,6 +6,6 @@ using namespace std; //not required, but simplifies a whole lot
 
 
 int main() {
-    init_slackerz();
+    init_slackerz(); //initilizes slackerz from the start. Will slow load time at the beggining, but will speed up the program overall. Not required if you don't want it
     print("Welcome to Slackerz!");
 }   
