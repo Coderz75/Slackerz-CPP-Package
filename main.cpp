@@ -1,41 +1,11 @@
-#include <iostream>
-#include "slackerz/all.h"
-#include<string>
-#include <vector>
-using namespace std;
+#include <iostream> //includes default c++
+#include "slackerz/default.h" //includes default package of slackerz (you can do dev for dev package, imports for import package, and all for everything, but default should be enough)
+#include<string> //not required, but reccomended 
+using namespace std; //not required, but simplifies a whole lot
 
 
 
 int main() {
     init_slackerz();
-    //tests prints and printn
-    //print("Hello");
-    //print(50.3434);
-    //tests conversions
-    //printn(fint(3544.2432));
-    //printn(sint("1"));
-    //print(nums(1));
-    //tests input
-    //string bob = input("Type your name: ");
-    //print("Hello " + bob);
-    //tests split and vector
-    //std::vector<string> a = split("a=b=c", "=");
-    //printv(a);
-    //printv(range(5));
-    //string bom = input("COMO ESTAS: ");
-    //print(bom);
-
-    //more tests
-    
-    //string como = input("HOLA COMO ESTAS ");
-    //print(como);
-    //if(como == "SOY DORA"){
-      //print("NOOOOOOOOOOo");
-      //print("oogley");
-    //}
-    //printn(random(34));
-
-    print("EVERYTHING WORKS FINE");
-
-
+    print("Welcome to Slackerz!");
 }   
