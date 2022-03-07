@@ -1,29 +1,13 @@
-//Version: 3.0
+//Versinon: Adaptive
 //Source: https://github.com/Coderz75/Slackerz-Compiler/tree/test
 //This code will not automatically update, you must manually re-download the files.
-//Branch: main [stable]
+//Branch: test [unstable]
 #include <iostream>
 #include<string>
 #include <algorithm>
 #include <vector>
+#include <pthread.h>
 using namespace std;
-
-
-// print
-void print(std::string print){
-  std::cout << print + "\n";
-}
-void printn(float number){
-  cout << to_string(number) + "\n";
-}
-
-void printv(std::vector<string> a){
-    for(int i=0; i < a.size(); i++)
-    std::cout << a.at(i) << '\n';
-}
-
-//CONVERSIONS
-//To int
 
 int fint(float number){
   return (int)number;
@@ -31,6 +15,29 @@ int fint(float number){
 int sint(std::string something){
   return stoi(something);
 }
+
+
+
+// print
+void print(std::string print){
+    std::cout << print + "\n";
+    ios_base::sync_with_stdio(0);
+}
+void printn(float num){
+    cout << to_string(num) + "\n";
+    ios_base::sync_with_stdio(0);
+}
+
+void printv(std::vector<string> a){
+    for(int i=0; i < a.size(); i++)
+    std::cout << a.at(i) << '\n';
+    ios_base::sync_with_stdio(0);
+}
+
+//CONVERSIONS
+//To int
+
+
 
 //to string
 
@@ -95,8 +102,21 @@ string cstr(char a){
     f.push_back(l);
     return f;
 }
+void turnOffSync(){
+    ios_base::sync_with_stdio(0);
+}
+void turnOnSync(){
+    ios_base::sync_with_stdio(1);
+}
+
+void clear(){
+    
+    std::cout<< u8"\033[2J\033[1;1H"; 
+}
+
 
 void init_slackerz(){
-    ios::sync_with_stdio(0); 
-    cin.tie(0);
+    pthread_t threads[2];
+    ios_base::sync_with_stdio(0);
+    clear();
 }
