@@ -1,7 +1,7 @@
-//Versinon: Adaptive
-//Source: https://github.com/Coderz75/Slackerz-Compiler/tree/test
+//Version: 4.0
+//Source: https://github.com/Coderz75/Slackerz-Compiler/tree/main
 //This code will not automatically update, you must manually re-download the files.
-//Branch: test [unstable]
+//Branch: main [stable]
 #include <iostream>
 #include<string>
 #include <algorithm>
