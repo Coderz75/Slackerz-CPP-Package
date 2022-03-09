@@ -1,7 +1,7 @@
-//Version: 4.0
-//Source: https://github.com/Coderz75/Slackerz-Compiler/tree/main
+//Version: beta 5
+//Source: https://github.com/Coderz75/Slackerz-Compiler/tree/test
 //This code will not automatically update, you must manually re-download the files.
-//Branch: main [stable]
+//Branch: test [unstable]
 #include <iostream>
 #include<string>
 #include <algorithm>
