@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <string>
+using namespace std;
 void print(std::string); //prints string
 void printn(float number);//prints float
 int fint(float number); //floats to int
@@ -28,3 +30,8 @@ std::string cstr(char a); //char to string
 
 void init_slackerz(); //initilizes slackerz
 
+std::string upper(std::string); //convert string to uppercase
+
+std::string lower(std::string); //convert string to lowercase
+
+int abs(int num); //gets absolute value of an int

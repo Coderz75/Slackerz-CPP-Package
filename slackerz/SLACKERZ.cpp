@@ -7,6 +7,10 @@
 #include <algorithm>
 #include <vector>
 #include <pthread.h>
+#include <cstdlib>
+#include <unistd.h>
+#include <time.h>
+
 using namespace std;
 
 int fint(float number){
@@ -110,13 +114,78 @@ void turnOnSync(){
 }
 
 void clear(){
-    
-    std::cout<< u8"\033[2J\033[1;1H"; 
+    #ifdef _WIN32 // Includes both 32 bit and 64 bit
+        #include <windows.h>
+          HANDLE                     hStdOut;
+          CONSOLE_SCREEN_BUFFER_INFO csbi;
+          DWORD                      count;
+          DWORD                      cellCount;
+          COORD                      homeCoords = { 0, 0 };
+        
+          hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
+          if (hStdOut == INVALID_HANDLE_VALUE) return;
+        
+          /* Get the number of cells in the current buffer */
+          if (!GetConsoleScreenBufferInfo( hStdOut, &csbi )) return;
+          cellCount = csbi.dwSize.X *csbi.dwSize.Y;
+        
+          /* Fill the entire buffer with spaces */
+          if (!FillConsoleOutputCharacter(
+            hStdOut,
+            (TCHAR) ' ',
+            cellCount,
+            homeCoords,
+            &count
+            )) return;
+        
+          /* Fill the entire buffer with the current colors and attributes */
+          if (!FillConsoleOutputAttribute(
+            hStdOut,
+            csbi.wAttributes,
+            cellCount,
+            homeCoords,
+            &count
+            )) return;
+        
+          /* Move the cursor home */
+          SetConsoleCursorPosition( hStdOut, homeCoords );
+	#else
+        std::cout<< u8"\033[2J\033[1;1H"; 
+	#endif
+
 }
 
 
 void init_slackerz(){
     pthread_t threads[2];
-    ios_base::sync_with_stdio(0);
     clear();
 }
+
+string upper(string data){
+    std::for_each(data.begin(), data.end(), [](char & c){
+        c = ::toupper(c);
+    });
+    return data;
+}
+string lower(string data){
+    std::for_each(data.begin(), data.end(), [](char & c){
+        c = ::tolower(c);
+    });
+    return data;
+}
+
+int abs(int num){
+    return abs(num);
+}
+
+string time(){
+  time_t rawtime;
+  struct tm * timeinfo;
+
+  time (&rawtime);
+  timeinfo = localtime (&rawtime);
+    string s = asctime(timeinfo);
+    
+    return s;
+}
+
