@@ -2,7 +2,7 @@ MEET SLACKERZ!!!!!
 
 This is a c++ package that makes c++ (much) easier, more info at https://coderz75.github.io/slackerz.html
 
-Rhis project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.txt)
+This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.txt)
 
 Version: Beta 6
 
