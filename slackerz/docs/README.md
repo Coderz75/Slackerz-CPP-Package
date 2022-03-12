@@ -12,4 +12,4 @@ This code will not automatically update, you must manually re-download the files
 
 Branch: Test [unstable]
 
-WARNING: THIS IS THE TEST BRANCH: THIS MAY BE UNSTABLE, USE AT YOUR OwN RIST
+WARNING: THIS IS THE TEST BRANCH: THIS MAY BE UNSTABLE, USE AT YOUR OWN RISK
