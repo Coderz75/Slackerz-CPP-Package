@@ -4,7 +4,7 @@ This is a c++ package that makes c++ (much) easier, more info at https://coderz7
 
 This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.txt)
 
-Version: Beta 6
+Version: Beta 7
 
 Source: https://github.com/Coderz75/Slackerz-Compiler/tree/test
 
