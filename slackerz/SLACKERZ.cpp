@@ -11,15 +11,6 @@ using namespace std;
 
 namespace slackerz{
 
-
-
-
-    
-    
-    //CONVERSIONS
-    //To int
-    
-    
     
     //to string
     

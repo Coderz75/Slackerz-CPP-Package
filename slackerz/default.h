@@ -10,20 +10,9 @@ using namespace std;
 
 namespace slackerz{
 
-// print
 
-
-    
-    //to string
-    
-    std::string nums(float num); //float to string
     
     std::string input(std::string ask);//collects user input
-    
-    
-
-    std::string is(int num); //int to string
-
 //
 
     int random(int thing); //random
@@ -158,6 +147,23 @@ namespace slackerz{
     int toint<slackerz::str>(slackerz::str something){
         string k = something.v;
         return stoi(k);
+    }
+
+//to string
+    template <typename L>
+    string tostring(L a);
+
+    template<>
+    string tostring<float>(float a){
+      return to_string(a);
+    }
+    template<>
+    string tostring<int>(int a){
+      return to_string(a);
+    }
+    template<>
+    string tostring<double>(double a){
+      return to_string(a);
     }
 }
 

@@ -22,4 +22,6 @@ int main() {
     print(k);
     str m("2");
     print(toint(m));
+    int kj = 3939;
+    print(tostring(kj));
 }   
