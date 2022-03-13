@@ -18,6 +18,8 @@ int main() {
         print("sss entirely lowercase");
     }
     print(2);
-    str k("HolaComoEstas");
+    str k("Hola Como Estas");
     print(k);
+    str m("2");
+    print(toint(m));
 }   

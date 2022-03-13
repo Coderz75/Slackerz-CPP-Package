@@ -11,12 +11,7 @@ using namespace std;
 
 namespace slackerz{
 
-    int fint(float number){
-      return (int)number;
-    }
-    int sint(std::string something){
-      return stoi(something);
-    }
+
 
 
     

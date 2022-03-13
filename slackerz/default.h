@@ -13,9 +13,6 @@ namespace slackerz{
 // print
 
 
-    int fint(float number); //floats to int
-    
-    int sint(std::string something); //string to int
     
     //to string
     
@@ -114,6 +111,7 @@ namespace slackerz{
                 return v;
             }
     };
+//print
     template <typename T>
     void print(T a);
 
@@ -143,6 +141,23 @@ namespace slackerz{
     template<>
     void print<slackerz::str>(slackerz::str a){
         cout << a.convstr() + "\n";
+    }
+//to int
+    template <typename U>
+    int toint(U something);
+
+    template<>
+    int toint<float>(float something){
+      return (int)something;
+    }
+    template<>
+    int toint<std::string>(std::string something){
+      return stoi(something);
+    }
+    template<>
+    int toint<slackerz::str>(slackerz::str something){
+        string k = something.v;
+        return stoi(k);
     }
 }
 
