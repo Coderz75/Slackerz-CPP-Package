@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 namespace slackerz{
@@ -38,4 +39,27 @@ namespace slackerz{
     std::string lower(std::string); //convert string to lowercase
     
     int abs(int num); //gets absolute value of an int
+    class str{
+        private:
+            string data;
+        public:
+            string v;
+            str(string s){
+                v = s;
+                data = v;
+            }
+            string upper(){
+                std::for_each(data.begin(), data.end(), [](char & c){
+                    c = ::toupper(c);
+                });
+                return data;
+            }
+            string lower(){
+                
+                std::for_each(data.begin(), data.end(), [](char & c){
+                    c = ::tolower(c);
+                });
+                return data;
+            }
+    };
 }

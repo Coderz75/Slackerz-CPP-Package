@@ -10,6 +10,7 @@
 using namespace std;
 
 namespace slackerz{
+
     int fint(float number){
       return (int)number;
     }
@@ -160,22 +161,11 @@ namespace slackerz{
         clear();
     }
     
-    string upper(string data){
-        std::for_each(data.begin(), data.end(), [](char & c){
-            c = ::toupper(c);
-        });
-        return data;
-    }
-    string lower(string data){
-        std::for_each(data.begin(), data.end(), [](char & c){
-            c = ::tolower(c);
-        });
-        return data;
-    }
     
     int abs(int num){
         return abs(num);
     }
+
 }
 string time(){
       time_t rawtime;
@@ -187,4 +177,3 @@ string time(){
         
         return s;
 }
-
