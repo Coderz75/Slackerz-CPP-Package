@@ -19,19 +19,6 @@ namespace slackerz{
     }
 
 
-
-// print
-    void print(std::string print){
-        std::cout << print + "\n";
-    }
-    void printn(float num){
-        cout << to_string(num) + "\n";
-    }
-
-    void printv(std::vector<string> a){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << '\n';
-    }
     
     
     //CONVERSIONS

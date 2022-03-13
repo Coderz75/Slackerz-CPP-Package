@@ -1,4 +1,5 @@
-#include "default.h"
+#ifndef TIME_H
+#define TIME_H
 #include <string>
 #ifdef _WIN32
 #include <Windows.h>
@@ -7,3 +8,5 @@
 #endif
 
 std::string time();
+
+#endif

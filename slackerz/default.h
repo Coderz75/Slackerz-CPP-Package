@@ -1,12 +1,17 @@
+#ifndef DEFAULT_H
+#define DEFAULT_H
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <cstring>
 using namespace std;
 
 namespace slackerz{
-    void print(std::string); //prints string
-    void printn(float number);//prints float
+
+// print
+
 
     int fint(float number); //floats to int
     
@@ -18,7 +23,6 @@ namespace slackerz{
     
     std::string input(std::string ask);//collects user input
     
-    void printv(std::vector<std::string> a); //prints a vector
     
 
     std::string is(int num); //int to string
@@ -38,25 +42,24 @@ namespace slackerz{
     int abs(int num); //gets absolute value of an int
     class str{
         private:
-            string data;
-            string a;
-            string x;
+            
+            
+            
+            string m;
         public:
             string v;
             str(string s){
                 v = s;
-                data = v;
-                a = v;
-                x = v;
             }
             string upper(){
+                string data = v;
                 std::for_each(data.begin(), data.end(), [](char & c){
                     c = ::toupper(c);
                 });
                 return data;
             }
             string lower(){
-                
+                string data = v;
                 std::for_each(data.begin(), data.end(), [](char & c){
                     c = ::tolower(c);
                 });
@@ -67,7 +70,7 @@ namespace slackerz{
     		}
             std::vector<std::string>  split(string x){
                 std::vector<std::string> so {};
-                string s = a;
+                string s = v;
                 string delim = x;
                 auto start = 0U;
                 auto end = s.find(delim);
@@ -83,8 +86,64 @@ namespace slackerz{
                 return so;
             }
             string capitilize(){
+                string a = v;
                 a[0] = toupper(a[0]); 
                 return a;
             }
+            bool isupper(){
+                string m = v;
+                for (int i = 0; i < m.length(); i++) {
+                  if(::isupper(m[i])){  
+                  }else{
+                      return false;
+                  }
+                }
+                return true;
+            }
+            bool islower(){
+                string m = v;
+                for (int i = 0; i < m.length(); i++) {
+                  if(::islower(m[i])){  
+                  }else{
+                      return false;
+                  }
+                }
+                return true;
+            }
+            string convstr(){
+                return v;
+            }
     };
+    template <typename T>
+    void print(T a);
+
+    template<>
+    void print<string>(std::string a){
+        std::cout << a + "\n";
+    }
+    template<>
+    void print<float>(float a){
+        cout << to_string(a) + "\n";
+    }
+    template<>
+
+    void print<std::vector<string>>(std::vector<string> a){
+        for(int i=0; i < a.size(); i++)
+        std::cout << a.at(i) << '\n';
+    }
+    template<>
+    void print<int>(int a){
+        cout << to_string(a) + "\n";
+    }
+    template<>
+    void print<char const*>(char const* a){
+        string l = str(a);
+        cout << l + "\n";
+    }
+    template<>
+    void print<slackerz::str>(slackerz::str a){
+        cout << a.convstr() + "\n";
+    }
 }
+
+#endif
