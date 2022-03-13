@@ -23,17 +23,14 @@ namespace slackerz{
 // print
     void print(std::string print){
         std::cout << print + "\n";
-        ios_base::sync_with_stdio(0);
     }
     void printn(float num){
         cout << to_string(num) + "\n";
-        ios_base::sync_with_stdio(0);
     }
 
     void printv(std::vector<string> a){
         for(int i=0; i < a.size(); i++)
         std::cout << a.at(i) << '\n';
-        ios_base::sync_with_stdio(0);
     }
     
     
@@ -57,24 +54,6 @@ namespace slackerz{
       cout << ask;
       getline(cin, x);
       return x;
-    }
-
-    std::vector<std::string>  split(string a, string x){
-        std::vector<std::string> so {};
-        string s = a;
-        string delim = x;
-        auto start = 0U;
-        auto end = s.find(delim);
-        while (end != std::string::npos)
-        {
-            string m = s.substr(start, end - start);
-            so.push_back(m);
-            start = end + delim.length();
-            end = s.find(delim, start);
-        }
-    
-        so.push_back(s.substr(start, end));
-        return so;
     }
     
     std::vector<string> range(int num){

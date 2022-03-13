@@ -17,12 +17,9 @@ namespace slackerz{
     std::string nums(float num); //float to string
     
     std::string input(std::string ask);//collects user input
-
-    std::vector<std::string> split(std::string a, std::string x); //splits a string
     
     void printv(std::vector<std::string> a); //prints a vector
     
-    std::vector<std::string> range(int num); // gives a range from 0 to a certain number
 
     std::string is(int num); //int to string
 
@@ -42,11 +39,15 @@ namespace slackerz{
     class str{
         private:
             string data;
+            string a;
+            string x;
         public:
             string v;
             str(string s){
                 v = s;
                 data = v;
+                a = v;
+                x = v;
             }
             string upper(){
                 std::for_each(data.begin(), data.end(), [](char & c){
@@ -60,6 +61,30 @@ namespace slackerz{
                     c = ::tolower(c);
                 });
                 return data;
+            }
+			operator std::string () const { // C++ verison of __repr__
+        		return v;
+    		}
+            std::vector<std::string>  split(string x){
+                std::vector<std::string> so {};
+                string s = a;
+                string delim = x;
+                auto start = 0U;
+                auto end = s.find(delim);
+                while (end != std::string::npos)
+                {
+                    string m = s.substr(start, end - start);
+                    so.push_back(m);
+                    start = end + delim.length();
+                    end = s.find(delim, start);
+                }
+            
+                so.push_back(s.substr(start, end));
+                return so;
+            }
+            string capitilize(){
+                a[0] = toupper(a[0]); 
+                return a;
             }
     };
 }
