@@ -54,7 +54,7 @@ namespace slackerz{
 			operator std::string () const { // C++ verison of __repr__
         		return v;
     		}
-            std::vector<std::string>  split(string x){
+            std::vector<std::string>  split(string x = " "){
                 std::vector<std::string> so {};
                 string s = v;
                 string delim = x;
@@ -98,6 +98,19 @@ namespace slackerz{
             }
             string convstr(){
                 return v;
+            }
+            string center(int s, string a = " "){
+                int spaces = s - v.length() ;
+                spaces = spaces/2;
+                string returnval = v;
+                for(int i = 0; i<spaces; i++){
+                    returnval = a + returnval;
+                }
+                for(int i = 0; i<spaces; i++){
+                    returnval = returnval+a;
+                }
+                return returnval;
+                
             }
     };
 //print
