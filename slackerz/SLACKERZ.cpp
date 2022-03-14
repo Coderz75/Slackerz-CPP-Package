@@ -22,7 +22,7 @@ namespace slackerz{
       return to_string(num);
     }
     
-    string input(std::string ask){
+    string input(std::string ask = ""){
       string x;
       cout << ask;
       getline(cin, x);

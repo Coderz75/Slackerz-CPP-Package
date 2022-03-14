@@ -5,4 +5,6 @@ int main() {
     print("Welcome to SLACKERZ!");
     str l("hello");
     print(l.center(10,"O"));
+    str hi(slackerz::input());
+    print(hi);
 }   
