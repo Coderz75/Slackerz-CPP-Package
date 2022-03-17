@@ -8,11 +8,6 @@ using namespace std;
 namespace slackerz{
 
     class str{
-            private:
-                
-                
-                
-                string m;
             public:
                 string v;
                 str(string s){

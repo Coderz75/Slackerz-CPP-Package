@@ -4,7 +4,9 @@
 #include <vector>
 #include <pthread.h>
 #include <cstdlib>
-#ifdef linux
+#ifdef _WIN32
+    #include <windows.h>
+#else
     #include <unistd.h>
 #endif
 #include <time.h>
@@ -69,7 +71,7 @@ namespace slackerz{
     
     void clear(){
         #ifdef _WIN32 // Includes both 32 bit and 64 bit
-            #include <windows.h>
+            
               HANDLE                     hStdOut;
               CONSOLE_SCREEN_BUFFER_INFO csbi;
               DWORD                      count;
@@ -112,7 +114,7 @@ namespace slackerz{
     
     void init_slackerz(){
         pthread_t threads[2];
-        clear();
+        ios_base::sync_with_stdio(false);
     }
     
     
