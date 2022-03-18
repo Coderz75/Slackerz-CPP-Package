@@ -53,9 +53,10 @@ for example, if you were to use the template:
 
 to search up your file's path, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
 
-[Coderz75](https://github.com/coderz75) - Main bulk
 
 ### Credits
 _______________________
 
 [Actiniumn404](https://github.com/actiniumn404) - Help with the str class, header gaurds, and print, toint, and tostring.
+
+[Coderz75](https://github.com/coderz75) - Main bulk
