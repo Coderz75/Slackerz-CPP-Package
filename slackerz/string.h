@@ -88,6 +88,14 @@ namespace slackerz{
                     return returnval;
                     
                 }
+                string zfill(int length){
+                    string l = v;
+                    int zeros = length - v.length();
+                    for(int i = 0; i< zeros; i++){
+                        l = "0" + l; 
+                    }
+                    return l;
+                }
                 
         };
 }
