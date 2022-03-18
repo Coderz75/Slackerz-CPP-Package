@@ -96,6 +96,17 @@ namespace slackerz{
                     }
                     return l;
                 }
+                string swapcase(){
+                    string a = v;
+                    for(int i = 0; i < a.length(); i++){
+                        if(::islower(a[i])){
+                            a[i] = toupper(a[i]);
+                        }else{
+                            a[i] = tolower(a[i]);
+                        }
+                    }
+                    return a;
+                }
                 
         };
 }
