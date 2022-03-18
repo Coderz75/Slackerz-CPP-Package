@@ -23,6 +23,8 @@ namespace slackerz{
     
     int abs(int num); //gets absolute value of an int
 
+    int random(int num = 9999999); // returns random int
+
 //print
     template <typename T>
     void print(T a);
