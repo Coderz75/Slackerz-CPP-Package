@@ -14,9 +14,48 @@ Branch: Test [unstable]
 
 WARNING: THIS IS THE TEST BRANCH: THIS MAY BE UNSTABLE, USE AT YOUR OWN RISK
 
+
+
+### Running the file:
+----
+(This is the procedure on windows, linux should be similar though)
+
+First, of course, you have to install a compiler, (for example [MSYS2](https://www.msys2.org/)) - follow the steps there
+
+If you are using linux you likely already have a compiler installed, try checking by running
+
+      g++ --version
+      clang --version
+
+If you get an error on both, you need to install a compiler
+
+Make sure you added the directory to your path
+
+Once your ready, open command prompt (or terminal for linux) and run these commands:
+
+      cd [your file's path]
+
+      g++ -o [program name] -I Path2Hello [Main file you are running] slackerz/SLACKERZ.cpp
+
+      .\[program name]
+      
+slackerz/SLACKERZ.cpp depends on where you put the slackerz folder, if you moved it, put it in the path you put it in
+
+for example, if you were to use the template:
+
+      cd [your file's path]
+
+      g++ -o program -I Path2Hello main.cpp slackerz/SLACKERZ.cpp
+
+      .\program
+
+[This should do it on windows]
+
+to search up your file's path, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
+
+[Coderz75](https://github.com/coderz75) - Main bulk
+
 ### Credits
 _______________________
 
 [Actiniumn404](https://github.com/actiniumn404) - Help with the str class, header gaurds, and print, toint, and tostring.
-
-[Coderz75](https://github.com/coderz75) - Main bulk
