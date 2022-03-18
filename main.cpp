@@ -7,3 +7,4 @@ int main() {
     print("Welcome to SLACKERZ!");
     print("cool right?");
 
+}
