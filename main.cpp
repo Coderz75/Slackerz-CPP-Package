@@ -5,4 +5,6 @@ int main() {
     init_slackerz();
     print("Welcome to SLACKERZ!");
     print("cool right?");
+    str h("HELLO! I am slackerz");
+    print(h.startswith("HELLO"));
 }

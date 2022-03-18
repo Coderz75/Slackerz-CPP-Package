@@ -25,37 +25,7 @@ namespace slackerz{
 
     int random(int num = 9999999); // returns random int
 
-//print
-    template <typename T>
-    void print(T a);
 
-    template<>
-    void print<string>(std::string a){
-        std::cout << a + "\n";
-    }
-    template<>
-    void print<float>(float a){
-        cout << to_string(a) + "\n";
-    }
-    template<>
-
-    void print<std::vector<string>>(std::vector<string> a){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << '\n';
-    }
-    template<>
-    void print<int>(int a){
-        cout << to_string(a) + "\n";
-    }
-    template<>
-    void print<char const*>(char const* a){
-        string l = str(a);
-        cout << l + "\n";
-    }
-    template<>
-    void print<slackerz::str>(slackerz::str a){
-        cout << a.convstr() + "\n";
-    }
 //to int
     template <typename U>
     int toint(U something);
@@ -89,6 +59,46 @@ namespace slackerz{
     template<>
     string tostring<double>(double a){
       return to_string(a);
+    }
+    template<>
+    string tostring(bool b) {
+    return b ? "true" : "false";
+    }
+
+//print
+    template <typename T>
+    void print(T a);
+
+    template<>
+    void print<string>(std::string a){
+        std::cout << a + "\n";
+    }
+    template<>
+    void print<float>(float a){
+        cout << to_string(a) + "\n";
+    }
+    template<>
+
+    void print<std::vector<string>>(std::vector<string> a){
+        for(int i=0; i < a.size(); i++)
+        std::cout << a.at(i) << '\n';
+    }
+    template<>
+    void print<int>(int a){
+        cout << to_string(a) + "\n";
+    }
+    template<>
+    void print<char const*>(char const* a){
+        string l = str(a);
+        cout << l + "\n";
+    }
+    template<>
+    void print<slackerz::str>(slackerz::str a){
+        cout << a.convstr() + "\n";
+    }
+    template<>
+    void print<bool>(bool a){
+        cout << tostring(a) + "\n";
     }
 }
 

@@ -4,6 +4,7 @@
 #include <string>
 #include <algorithm>
 #include <cstring>
+#include "default.h"
 using namespace std;
 namespace slackerz{
 
@@ -106,6 +107,15 @@ namespace slackerz{
                         }
                     }
                     return a;
+                }
+                bool startswith(string a){
+                    string l = v;
+                    for (int i = 0; i< a.length(); i++){
+                        if (a[i] != l[i]){
+                            return false;
+                        }
+                    }
+                    return true;
                 }
                 
         };
