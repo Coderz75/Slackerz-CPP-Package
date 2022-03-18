@@ -108,10 +108,14 @@ namespace slackerz{
                     }
                     return a;
                 }
-                bool startswith(string a){
+                bool startswith(string a, int b = 0, int c = 0){
                     string l = v;
-                    for (int i = 0; i< a.length(); i++){
-                        if (a[i] != l[i]){
+                    int x = c;
+                    if (x== 0){
+                        x = a.length();
+                    }
+                    for (int i = 0; i< i; i++){
+                        if (a[i+b] != l[i+b]){
                             return false;
                         }
                     }
