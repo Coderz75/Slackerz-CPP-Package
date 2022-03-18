@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iostream>
 #include<string>
 #include <algorithm>
 #include <vector>
@@ -10,6 +11,7 @@
     #include <unistd.h>
 #endif
 #include <time.h>
+#include <thread>
 
 using namespace std;
 
@@ -112,17 +114,22 @@ namespace slackerz{
     }
     
     
-    void init_slackerz(){
+    void init_slackerz(int a= 0){
         pthread_t threads[2];
-        ios_base::sync_with_stdio(false);
+        ios_base::sync_with_stdio(a);
     }
     
     
     int abs(int num){
         return abs(num);
     }
-
+    
+    void sleep(int milliseconds){
+      std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+    }
+    
 }
+
 string time(){
       time_t rawtime;
       struct tm * timeinfo;

@@ -15,7 +15,7 @@ namespace slackerz{
     
     std::string cstr(char a); //char to string
     
-    void init_slackerz(); //initilizes slackerz
+    void init_slackerz(int a= 0); //initilizes slackerz
     
     std::string upper(std::string); //convert string to uppercase
     
