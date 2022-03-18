@@ -4,42 +4,17 @@
 #include <vector>
 #include <pthread.h>
 #include <cstdlib>
-#include <unistd.h>
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
 #include <time.h>
 
 using namespace std;
 
 namespace slackerz{
-    int fint(float number){
-      return (int)number;
-    }
-    int sint(std::string something){
-      return stoi(something);
-    }
 
-
-
-// print
-    void print(std::string print){
-        std::cout << print + "\n";
-        ios_base::sync_with_stdio(0);
-    }
-    void printn(float num){
-        cout << to_string(num) + "\n";
-        ios_base::sync_with_stdio(0);
-    }
-
-    void printv(std::vector<string> a){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << '\n';
-        ios_base::sync_with_stdio(0);
-    }
-    
-    
-    //CONVERSIONS
-    //To int
-    
-    
     
     //to string
     
@@ -51,29 +26,11 @@ namespace slackerz{
       return to_string(num);
     }
     
-    string input(std::string ask){
+    string input(std::string ask = ""){
       string x;
       cout << ask;
       getline(cin, x);
       return x;
-    }
-
-    std::vector<std::string>  split(string a, string x){
-        std::vector<std::string> so {};
-        string s = a;
-        string delim = x;
-        auto start = 0U;
-        auto end = s.find(delim);
-        while (end != std::string::npos)
-        {
-            string m = s.substr(start, end - start);
-            so.push_back(m);
-            start = end + delim.length();
-            end = s.find(delim, start);
-        }
-    
-        so.push_back(s.substr(start, end));
-        return so;
     }
     
     std::vector<string> range(int num){
@@ -114,7 +71,7 @@ namespace slackerz{
     
     void clear(){
         #ifdef _WIN32 // Includes both 32 bit and 64 bit
-            #include <windows.h>
+            
               HANDLE                     hStdOut;
               CONSOLE_SCREEN_BUFFER_INFO csbi;
               DWORD                      count;
@@ -157,25 +114,14 @@ namespace slackerz{
     
     void init_slackerz(){
         pthread_t threads[2];
-        clear();
+        ios_base::sync_with_stdio(false);
     }
     
-    string upper(string data){
-        std::for_each(data.begin(), data.end(), [](char & c){
-            c = ::toupper(c);
-        });
-        return data;
-    }
-    string lower(string data){
-        std::for_each(data.begin(), data.end(), [](char & c){
-            c = ::tolower(c);
-        });
-        return data;
-    }
     
     int abs(int num){
         return abs(num);
     }
+
 }
 string time(){
       time_t rawtime;
@@ -187,4 +133,3 @@ string time(){
         
         return s;
 }
-

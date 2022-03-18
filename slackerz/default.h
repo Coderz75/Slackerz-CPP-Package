@@ -1,30 +1,14 @@
+#ifndef DEFAULT_H
+#define DEFAULT_H
+
 #include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
+#include "string.h"
 
 namespace slackerz{
-    void print(std::string); //prints string
-    void printn(float number);//prints float
 
-    int fint(float number); //floats to int
-    
-    int sint(std::string something); //string to int
-    
-    //to string
-    
-    std::string nums(float num); //float to string
-    
-    std::string input(std::string ask);//collects user input
 
-    std::vector<std::string> split(std::string a, std::string x); //splits a string
     
-    void printv(std::vector<std::string> a); //prints a vector
-    
-    std::vector<std::string> range(int num); // gives a range from 0 to a certain number
-
-    std::string is(int num); //int to string
-
+    std::string input(std::string ask = "");//collects user input
 //
 
     int random(int thing); //random
@@ -38,4 +22,72 @@ namespace slackerz{
     std::string lower(std::string); //convert string to lowercase
     
     int abs(int num); //gets absolute value of an int
+
+//print
+    template <typename T>
+    void print(T a);
+
+    template<>
+    void print<string>(std::string a){
+        std::cout << a + "\n";
+    }
+    template<>
+    void print<float>(float a){
+        cout << to_string(a) + "\n";
+    }
+    template<>
+
+    void print<std::vector<string>>(std::vector<string> a){
+        for(int i=0; i < a.size(); i++)
+        std::cout << a.at(i) << '\n';
+    }
+    template<>
+    void print<int>(int a){
+        cout << to_string(a) + "\n";
+    }
+    template<>
+    void print<char const*>(char const* a){
+        string l = str(a);
+        cout << l + "\n";
+    }
+    template<>
+    void print<slackerz::str>(slackerz::str a){
+        cout << a.convstr() + "\n";
+    }
+//to int
+    template <typename U>
+    int toint(U something);
+
+    template<>
+    int toint<float>(float something){
+      return (int)something;
+    }
+    template<>
+    int toint<std::string>(std::string something){
+      return stoi(something);
+    }
+    template<>
+    int toint<slackerz::str>(slackerz::str something){
+        string k = something.v;
+        return stoi(k);
+    }
+
+//to string
+    template <typename L>
+    string tostring(L a);
+
+    template<>
+    string tostring<float>(float a){
+      return to_string(a);
+    }
+    template<>
+    string tostring<int>(int a){
+      return to_string(a);
+    }
+    template<>
+    string tostring<double>(double a){
+      return to_string(a);
+    }
 }
+
+#endif
