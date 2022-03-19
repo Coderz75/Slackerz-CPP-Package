@@ -18,7 +18,7 @@ Packages:
 
 <h1 id = "default"> Default Package </h1>
 
-The default package consists of many items. This package is required for slackerz, as many other functions relie on it
+The default package consists of many items. This package is required for slackerz, as many other functions rely on it
 
 You can add the default package by putting
 
@@ -40,11 +40,18 @@ You may put a 1 or a 0 in the parenthesis, this controls the speed and working o
 
 This function is the heart of every python program. It follows this syntax:
 
-       void print(T a, string end = "\n");
+       void print(T a, optional: string end = "\n");
 
 The T means that it can handle any type, from boolean to string.
 
 The end varaible is optional, this starts a new line
+
+for example, to print on a new line:
+
+      print("Hello");
+And to print on the same line:
+
+      print("hello","");
 
 <h3>Input</h3>
 
