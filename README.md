@@ -131,7 +131,7 @@ Slackerz string operations are highly based on python operations, so you can sea
 
                 bool startswith(string a,optional: int b = 0,Optional: int c = 0); // Checks what does it start with
 
-<h1 id = "Dev">Developer Package:</h1>
+<h1 id = "dev">Developer Package:</h1>
 
 The dev package is pretty small. It gives developer tools that normal coders don't care about. Yuu can add it by putting: THis at the start of your code:
 
