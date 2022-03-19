@@ -81,12 +81,13 @@ You put in a number, and it gets the absolute value of it
 
 First, of course, you have to install a compiler, (for example [MSYS2](https://www.msys2.org/)) - follow the steps there
 
-If you are using linux you likely already have a compiler installed, try checking by running
+If you are using linux you likely already have a compiler installed, try checking by running:
 
       g++ --version
+      gdb --version
       clang --version
 
-If you get an error on both, you need to install a compiler
+If you get an error on all three of them, you need to install a compiler.
 
 Make sure you added the directory to your path
 
@@ -102,7 +103,7 @@ slackerz/SLACKERZ.cpp depends on where you put the slackerz folder, if you moved
 
 for example, if you were to use the template:
 
-      cd [your file's path]
+      cd [Directory]
 
       g++ -o program -I Path2Hello main.cpp slackerz/SLACKERZ.cpp
 
@@ -110,7 +111,7 @@ for example, if you were to use the template:
 
 [This should do it on windows]
 
-to search up your file's path, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
+to search up your file's directory, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
 
 <h1 id = "credits">Credits</h1>
 
