@@ -43,6 +43,14 @@ namespace slackerz{
     int toint<bool>(bool something){
         return int(something);
     }
+    template<>
+    int toint<double>(double something){
+        return int(something);
+    }
+    template<>
+    int toint<char>(char something){
+        return int(something);
+    }
 
 //to string
     template <typename L>
@@ -71,6 +79,44 @@ namespace slackerz{
         f.push_back(l);
         return f;
     }
+    //To float
+
+    template <typename H>
+    float tofloat(H a);
+
+    template<>
+    float tofloat(int a){
+        return (float) a;
+    }
+
+    template<>
+    float tofloat(std::string a){
+        int x = toint(a);
+        return (float) x;
+    }
+
+    template<>
+    float tofloat(char a){
+        int x = toint(a);
+        return (float) x;
+    }
+
+    template<>
+    float tofloat(bool a){
+        int x = toint(a);
+        return (float) x;
+    }
+    template<>
+    float tofloat(double a){
+        return (float) a;
+    }
+
+    template<>
+    float tofloat<slackerz::str>(slackerz::str a){
+        string k = a.v;
+        return tofloat(k);
+    }
+
 //print
     template <typename T>
     void print(T a, string x = "\n");
