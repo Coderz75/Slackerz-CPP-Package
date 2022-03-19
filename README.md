@@ -85,7 +85,7 @@ They follow this syntax:
 
       int toint(U a);
       string tostring (T a);
-      float tofloat)
+      float tofloat(H a);
 Any of these can transfer any (c++) datatype to the requested type 
 
 
