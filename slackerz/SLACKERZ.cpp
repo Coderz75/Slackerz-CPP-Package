@@ -57,12 +57,6 @@ namespace slackerz{
       return a;
     }
     
-    string cstr(char a){
-        char l = a;
-        string f;
-        f.push_back(l);
-        return f;
-    }
 
     void turnOffSync(){
         ios_base::sync_with_stdio(0);

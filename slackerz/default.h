@@ -60,6 +60,13 @@ namespace slackerz{
     string tostring(bool b) {
     return b ? "true" : "false";
     }
+    template<>
+    string tostring(char a){
+        char l = a;
+        string f;
+        f.push_back(l);
+        return f;
+    }
 
 //print
     template <typename T>
@@ -103,6 +110,7 @@ namespace slackerz{
         std::cout << x;
         cout << tostring(a);
     }
+    
 }
 
 #endif

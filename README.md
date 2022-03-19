@@ -74,14 +74,6 @@ This function gets the absolute value of an int. It follows this syntax:
        int abs(int);
 You put in a number, and it gets the absolute value of it
 
-<h3>Char to str</h3>
-
-This converts a charachter into a string, (char is a variable type in c++)
-
-It follows this syntax:
-
-       string cstr(char a);
-
 
 <h1 id = "run"> Running the file: </h1>
 
