@@ -40,9 +40,11 @@ You may put a 1 or a 0 in the parenthesis, this controls the speed and working o
 
 This function is the heart of every python program. It follows this syntax:
 
-       void print(T a);
+       void print(T a, string end = "\n");
 
 The T means that it can handle any type, from boolean to string.
+
+The end varaible is optional, this starts a new line
 
 <h3>Input</h3>
 

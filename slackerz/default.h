@@ -67,34 +67,41 @@ namespace slackerz{
 
     template<>
     void print<string>(std::string a, string x){
-        std::cout << a + x;
+        std::cout << x;
+        std::cout << a;
     }
     template<>
     void print<float>(float a, string x){
-        cout << to_string(a) + x;
+        std::cout << x;
+        cout << to_string(a);
     }
     template<>
 
     void print<std::vector<string>>(std::vector<string> a, string x){
+        std::cout << x;
         for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << '\n';
+        std::cout << a.at(i) << x;
     }
     template<>
     void print<int>(int a, string x){
-        cout << to_string(a) + x;
+        std::cout << x;
+        cout << to_string(a);
     }
     template<>
     void print<char const*>(char const* a, string x){
+        std::cout << x;
         string l = str(a);
-        cout << l + x;
+        cout << l;
     }
     template<>
     void print<slackerz::str>(slackerz::str a, string x){
-        cout << a.convstr() + x;
+        std::cout << x;
+        cout << a.convstr();
     }
     template<>
     void print<bool>(bool a, string x){
-        cout << tostring(a) + x;
+        std::cout << x;
+        cout << tostring(a);
     }
 }
 
