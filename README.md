@@ -5,7 +5,29 @@ This is a c++ package that makes c++ (much) easier, more info at https://coderz7
 This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.txt)
 
 
-### Running the file:
+# Guide:
+
+Packages:
+
+1. [Default package](default)
+
+
+[Running the program](#run)
+
+<h1 id = "default"> Default Package </h1>
+
+The default package consists of many items. This package is required for slackerz, as many other functions relie on it
+
+You can add the default package by putting
+
+      #include <slackerz/default.h>
+
+At the start of your code
+
+
+
+
+<h1 id = "run"> Running the file: </h1>
 ----
 (This is the procedure on windows, linux should be similar though)
 
