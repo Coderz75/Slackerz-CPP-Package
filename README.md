@@ -1,22 +1,235 @@
 # SLACKERZ!!!!!
 
-This is a c++ package that makes c++ (much) easier, more info at https://coderz75.github.io/slackerz.html
+This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.md)
 
+<b>THE GUIDE BELOW IS NOT COMPLETE!!</b>
 
-### Running the file:
-----
+Slackerz is very extensive, so it will taake a while to finish the guide.
+
+# Table of Contents:
+
+[Getting started](#start)
+
+Packages:
+
+1. [Default package](#default)
+2. [Developer Package](#dev)
+3. [Import Package](#import)
+4. [Time Package](#time)
+
+[Running the program](#run)
+
+[Credits](#credits)
+
+<h1 id = "start">Getting started</h1>
+
+1. Navigate to this repository at https://github.com/Coderz75/Slackerz-Compiler
+
+2. Click the code button and press download as zip
+
+3. Extract the zip
+
+The folder labled slackerz is the heart of the program, the rest is just a template. 
+
+If your making a new cpp file, put this in the program:
+
+      #include "slackerz/default.h"
+      using namespace slackerz;
+
+      int main() {
+      init_slackerz();
+      //The rest of your code here
+      }
+GET CODING!
+
+<h1 id = "default"> Default Package </h1>
+
+The default package consists of many items. This package is required for slackerz, as many other functions rely on it
+
+You can add the default package by putting
+
+      #include <slackerz/default.h>
+
+At the start of your code
+
+<h3>Init Slackerz</h3>
+
+This functions follows the syntax of:
+
+    void init_slackerz(optional int)
+
+to call it, just type init_slackerz(); in your code
+
+You may put a 1 or a 0 in the parenthesis, this controls the speed and working of the program. The default is 0. You may want to switch it to 1 depending if you are using sleep or clear functions. (more about that later.)
+
+<h3>Print</h3>
+
+This function is the heart of every python program. It follows this syntax:
+
+       void print(T a, optional: string end = "\n");
+
+The T means that it can handle any type, from boolean to string.
+
+The end varaible is optional, this starts a new line
+
+for example, to print on a new line:
+
+      print("Hello");
+And to print on the same line:
+
+      print("hello","");
+
+<h3>Input</h3>
+
+This is likely one of the most popular python functions. It follows this syntax: 
+
+      string input(optional: string);
+
+Input returns a string, for example, I can do:
+
+       str l(input("Type in your name"));
+       print(l);
+And it will print out what i types into the console
+
+<h3>Random</h3>
+Slackerz doesn't have a random class, to random.randit(x) won't work, instead, it is random(optional int)
+
+<h3>Absolute Value</h3>
+This function gets the absolute value of an int. It follows this syntax:
+
+       int abs(int);
+You put in a number, and it gets the absolute value of it
+
+<h3>Conversions:</h3>
+
+Currently, slackerz only supports to int, to float and to string (more coming soon)
+
+They follow this syntax:
+
+      int toint(U a);
+      string tostring (T a);
+      float tofloat(H a);
+Any of these can transfer any (c++) datatype to the requested type 
+
+<h3>Strings</h3>
+
+Slackerz' string are different from typical strings, they follow this syntax:
+
+      str mystring("My string's value");
+
+A known issue with slackerz strings is that sometimes you may get an error similar to "No operator matches this operation" If this happens, do [stringname].v as the value, for example:
+
+      if(mystring.v == "Hi"){ // works
+            print("Hello!");
+      }
+
+      if(mystring == "Hi"){ // May give error 
+            print("Hello!");
+      }
+
+<h4>String operations</h4>
+Slackerz has many string operations. They are listed below:
+
+Slackerz string operations are highly based on python operations, so you can search these python operations there
+
+                string upper(); //Checks if a (slackerz) string is all uppercase
+
+                string lower() //Checks if a (slackerz) string is all lowercase
+
+                std::vector<std::string>  split(string x = " "); //Splits a string into a VECTOR, not a c++ list. Big difference
+
+                string capitilize(); Capitlizes the first letter of a string
+
+                bool isupper(); //chekcs if a string is uppercase
+
+                bool islower(); //checks if a string is lowercase
+
+                string convstr(); //converts the slackerz string into a c++ string
+
+                string center(int s, optional: string a = " "); //Returns centered string
+
+                string zfill(int length); Makes the string the desired length by filling it with zeros
+
+                string swapcase(); //swaps the case of the string
+
+                bool startswith(string a,optional: int b = 0,Optional: int c = 0); // Checks what does it start with
+
+<h1 id = "dev">Developer Package:</h1>
+
+The dev package is pretty small. It gives developer tools that normal coders don't care about. Yuu can add it by putting: THis at the start of your code:
+
+      #include "slackerz/dev.h"
+
+THE DEV PACKAGE DOES NOT INCLUDE THE DEFAULT PACKAGE, You must put the default package header from above to add it.
+
+<h3>Turn off/on sync (beta)</h3>
+
+You can turn on/off sync with studio (c package) by putting the 1 or 0 in the paranthesis of the init_slackerz() function, but incase you are not using that, you can use these functions
+
+      void turnOffSync(); //turns off sync (default with init_slackerz())
+    
+      void turnOnSync(); //turns on sync (default without init_slackerz())
+
+<h1 id = "import">Import Package</h1>
+
+The things in this package ARE NOT IN PYTHON. Just things that make lafe mcuh easier
+
+Add this by doing: 
+
+      #include "slackerz/imports.h"
+
+<h3>Clear</h3>
+
+The clear function clears the console/teminal. This works on windows and linux. It may or may not work in MAC OS
+
+When using this, it is reccomended to turn on sync, or to put init_slackerz(1); at the front of your code
+
+It follows this syntax:
+
+      void clear();
+
+<h1 id = "time">Time</h1>
+
+The time functions adds things for time
+
+Add this by doing: 
+
+      #include "slackerz/time.h"
+
+<h3>Sleep</h3>
+
+Sleeps the program for a number of milliseconds.
+
+When using this, it is reccomended to turn on sync, or to put init_slackerz(1); at the front of your code
+
+It follows this syntax
+
+      void sleep(int millisecond);
+
+<h3>Time</h3>
+
+Gives the current time as a string. (for the native processor.) When using online compilers, it may give different times.
+
+It follows this syntax
+
+      string time();
+
+
+<h1 id = "run"> Running the file: </h1>
+
 (This is the procedure on windows, linux should be similar though)
 
 First, of course, you have to install a compiler, (for example [MSYS2](https://www.msys2.org/)) - follow the steps there
 
-If you are using linux you likely already have a compiler installed, try checking by running
+If you are using linux you likely already have a compiler installed, try checking by running:
 
       g++ --version
+      gdb --version
       clang --version
 
-If you get an error on both, you need to install a compiler
+If you get an error on all three of them, you need to install a compiler.
 
 Make sure you added the directory to your path
 
@@ -32,7 +245,7 @@ slackerz/SLACKERZ.cpp depends on where you put the slackerz folder, if you moved
 
 for example, if you were to use the template:
 
-      cd [your file's path]
+      cd [Directory]
 
       g++ -o program -I Path2Hello main.cpp slackerz/SLACKERZ.cpp
 
@@ -40,11 +253,9 @@ for example, if you were to use the template:
 
 [This should do it on windows]
 
-to search up your file's path, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
+to search up your file's directory, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
 
-
-### Credits
-_______________________
+<h1 id = "credits">Credits</h1>
 
 [Actiniumn404](https://github.com/actiniumn404) - Help with the str class, header gaurds, and print, toint, and tostring.
 

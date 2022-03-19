@@ -4,6 +4,7 @@
 #include <string>
 #include <algorithm>
 #include <cstring>
+#include "default.h"
 using namespace std;
 namespace slackerz{
 
@@ -87,6 +88,38 @@ namespace slackerz{
                     }
                     return returnval;
                     
+                }
+                string zfill(int length){
+                    string l = v;
+                    int zeros = length - v.length();
+                    for(int i = 0; i< zeros; i++){
+                        l = "0" + l; 
+                    }
+                    return l;
+                }
+                string swapcase(){
+                    string a = v;
+                    for(int i = 0; i < a.length(); i++){
+                        if(::islower(a[i])){
+                            a[i] = toupper(a[i]);
+                        }else{
+                            a[i] = tolower(a[i]);
+                        }
+                    }
+                    return a;
+                }
+                bool startswith(string a, int b = 0, int c = 0){
+                    string l = v;
+                    int x = c;
+                    if (x== 0){
+                        x = a.length();
+                    }
+                    for (int i = 0; i< a.length(); i++){
+                        if (a[i+b] != l[i+b]){
+                            return false;
+                        }
+                    }
+                    return true;
                 }
                 
         };

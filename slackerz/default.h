@@ -9,51 +9,19 @@ namespace slackerz{
 
     
     std::string input(std::string ask = "");//collects user input
-//
-
-    int random(int thing); //random
     
     std::string cstr(char a); //char to string
     
-    void init_slackerz(); //initilizes slackerz
+    void init_slackerz(int a= 0); //initilizes slackerz
     
-    std::string upper(std::string); //convert string to uppercase
-    
-    std::string lower(std::string); //convert string to lowercase
     
     int abs(int num); //gets absolute value of an int
 
-//print
-    template <typename T>
-    void print(T a);
+    int random(int num = 9999999); // returns random int
 
-    template<>
-    void print<string>(std::string a){
-        std::cout << a + "\n";
-    }
-    template<>
-    void print<float>(float a){
-        cout << to_string(a) + "\n";
-    }
-    template<>
+    std::vector<string> range(int num);
 
-    void print<std::vector<string>>(std::vector<string> a){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << '\n';
-    }
-    template<>
-    void print<int>(int a){
-        cout << to_string(a) + "\n";
-    }
-    template<>
-    void print<char const*>(char const* a){
-        string l = str(a);
-        cout << l + "\n";
-    }
-    template<>
-    void print<slackerz::str>(slackerz::str a){
-        cout << a.convstr() + "\n";
-    }
+
 //to int
     template <typename U>
     int toint(U something);
@@ -70,6 +38,18 @@ namespace slackerz{
     int toint<slackerz::str>(slackerz::str something){
         string k = something.v;
         return stoi(k);
+    }
+    template<>
+    int toint<bool>(bool something){
+        return int(something);
+    }
+    template<>
+    int toint<double>(double something){
+        return int(something);
+    }
+    template<>
+    int toint<char>(char something){
+        return int(something);
     }
 
 //to string
@@ -88,6 +68,98 @@ namespace slackerz{
     string tostring<double>(double a){
       return to_string(a);
     }
+    template<>
+    string tostring(bool b) {
+    return b ? "true" : "false";
+    }
+    template<>
+    string tostring(char a){
+        char l = a;
+        string f;
+        f.push_back(l);
+        return f;
+    }
+    //To float
+
+    template <typename H>
+    float tofloat(H a);
+
+    template<>
+    float tofloat(int a){
+        return (float) a;
+    }
+
+    template<>
+    float tofloat(std::string a){
+        int x = toint(a);
+        return (float) x;
+    }
+
+    template<>
+    float tofloat(char a){
+        int x = toint(a);
+        return (float) x;
+    }
+
+    template<>
+    float tofloat(bool a){
+        int x = toint(a);
+        return (float) x;
+    }
+    template<>
+    float tofloat(double a){
+        return (float) a;
+    }
+
+    template<>
+    float tofloat<slackerz::str>(slackerz::str a){
+        string k = a.v;
+        return tofloat(k);
+    }
+
+//print
+    template <typename T>
+    void print(T a, string x = "\n");
+
+    template<>
+    void print<string>(std::string a, string x){
+        std::cout << x;
+        std::cout << a;
+    }
+    template<>
+    void print<float>(float a, string x){
+        std::cout << x;
+        cout << to_string(a);
+    }
+    template<>
+
+    void print<std::vector<string>>(std::vector<string> a, string x){
+        std::cout << x;
+        for(int i=0; i < a.size(); i++)
+        std::cout << a.at(i) << x;
+    }
+    template<>
+    void print<int>(int a, string x){
+        std::cout << x;
+        cout << to_string(a);
+    }
+    template<>
+    void print<char const*>(char const* a, string x){
+        std::cout << x;
+        string l = str(a);
+        cout << l;
+    }
+    template<>
+    void print<slackerz::str>(slackerz::str a, string x){
+        std::cout << x;
+        cout << a.convstr();
+    }
+    template<>
+    void print<bool>(bool a, string x){
+        std::cout << x;
+        cout << tostring(a);
+    }
+    
 }
 
 #endif

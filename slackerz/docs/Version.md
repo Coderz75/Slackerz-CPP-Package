@@ -1,4 +1,4 @@
-Version: Beta 7
+Version: Beta 8
 
 Source: https://github.com/Coderz75/Slackerz-Compiler/tree/main
 
