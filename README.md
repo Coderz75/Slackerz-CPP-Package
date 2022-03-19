@@ -10,6 +10,8 @@ Slackerz is very extensive, so it will taake a while to finish the guide.
 
 # Table of Contents:
 
+[Getting started](#start)
+
 Packages:
 
 1. [Default package](#default)
@@ -20,6 +22,27 @@ Packages:
 [Running the program](#run)
 
 [Credits](#credits)
+
+<h1 id = "start">Getting started</h1>
+
+1. Navigate to this repository at https://github.com/Coderz75/Slackerz-Compiler
+
+2. Click the code button and press download as zip
+
+3. Extract the zip
+
+The folder labled slackerz is the heart of the program, the rest is just a template. 
+
+If your making a new cpp file, put this in the program:
+
+      #include "slackerz/default.h"
+      using namespace slackerz;
+
+      int main() {
+      init_slackerz();
+      //The rest of your code here
+      }
+GET CODING!
 
 <h1 id = "default"> Default Package </h1>
 
