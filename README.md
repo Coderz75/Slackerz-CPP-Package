@@ -4,6 +4,9 @@ This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.txt)
 
+<b>THE GUIDE BELOW IS NOT COMPLETE!!</b>
+
+Slackerz is very extensive, so it will taake a while to finish the guide.
 
 # Table of Contents:
 
