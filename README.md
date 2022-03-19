@@ -14,6 +14,8 @@ Packages:
 
 1. [Default package](#default)
 2. [Developer Package](#dev)
+3. [Import Package](#import)
+4. [Time Package](#time)
 
 [Running the program](#run)
 
@@ -147,6 +149,49 @@ You can turn on/off sync with studio (c package) by putting the 1 or 0 in the pa
     
       void turnOnSync(); //turns on sync (default without init_slackerz())
 
+<h1 id = "import">Import Package</h1>
+
+The things in this package ARE NOT IN PYTHON. Just things that make lafe mcuh easier
+
+Add this by doing: 
+
+      #include "slackerz/imports.h"
+
+<h3>Clear</h3>
+
+The clear function clears the console/teminal. This works on windows and linux. It may or may not work in MAC OS
+
+When using this, it is reccomended to turn on sync, or to put init_slackerz(1); at the front of your code
+
+It follows this syntax:
+
+      void clear();
+
+<h1 id = "time">Time</h1>
+
+The time functions adds things for time
+
+Add this by doing: 
+
+      #include "slackerz/time.h"
+
+<h3>Sleep</h3>
+
+Sleeps the program for a number of milliseconds.
+
+When using this, it is reccomended to turn on sync, or to put init_slackerz(1); at the front of your code
+
+It follows this syntax
+
+      void sleep(int millisecond);
+
+<h3>Time</h3>
+
+Gives the current time as a string. (for the native processor.) When using online compilers, it may give different times.
+
+It follows this syntax
+
+      string time();
 
 
 <h1 id = "run"> Running the file: </h1>
