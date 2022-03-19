@@ -74,6 +74,15 @@ This function gets the absolute value of an int. It follows this syntax:
        int abs(int);
 You put in a number, and it gets the absolute value of it
 
+<h2>Conversions:</h2>
+
+Currently, slackerz only supports to int and to string (more coming soon)
+
+They follow this syntax:
+
+      int toint(U a);
+      string tostring (T a);
+Both of these can transfer any (c++) datatype to the requested type 
 
 <h1 id = "run"> Running the file: </h1>
 

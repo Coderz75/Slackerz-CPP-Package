@@ -39,6 +39,10 @@ namespace slackerz{
         string k = something.v;
         return stoi(k);
     }
+    template<>
+    int toint<bool>(bool something){
+        return int(something);
+    }
 
 //to string
     template <typename L>
@@ -67,7 +71,6 @@ namespace slackerz{
         f.push_back(l);
         return f;
     }
-
 //print
     template <typename T>
     void print(T a, string x = "\n");

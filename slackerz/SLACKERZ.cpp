@@ -20,10 +20,6 @@ namespace slackerz{
     
     //to string
     
-    string nums(float num){
-      return to_string(num);
-    }
-    
     string is(int num){
       return to_string(num);
     }
