@@ -114,7 +114,7 @@ namespace slackerz{
                     if (x== 0){
                         x = a.length();
                     }
-                    for (int i = 0; i< i; i++){
+                    for (int i = 0; i< a.length(); i++){
                         if (a[i+b] != l[i+b]){
                             return false;
                         }

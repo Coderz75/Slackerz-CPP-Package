@@ -17,13 +17,12 @@ namespace slackerz{
     
     void init_slackerz(int a= 0); //initilizes slackerz
     
-    std::string upper(std::string); //convert string to uppercase
-    
-    std::string lower(std::string); //convert string to lowercase
     
     int abs(int num); //gets absolute value of an int
 
     int random(int num = 9999999); // returns random int
+
+    std::vector<string> range(int num);
 
 
 //to int

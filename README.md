@@ -1,18 +1,20 @@
 # SLACKERZ!!!!!
 
-This is a c++ package that makes c++ (much) easier, more info at https://coderz75.github.io/slackerz.html
+This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.txt)
 
 
-# Guide:
+# Table of Contents:
 
 Packages:
 
-1. [Default package](default)
+1. [Default package](#default)
 
 
 [Running the program](#run)
+
+[Credits](#credits)
 
 <h1 id = "default"> Default Package </h1>
 
@@ -24,11 +26,56 @@ You can add the default package by putting
 
 At the start of your code
 
+<h3>Init Slackerz</h3>
 
+This functions follows the syntax of:
+
+    void init_slackerz(optional int)
+
+to call it, just type init_slackerz(); in your code
+
+You may put a 1 or a 0 in the parenthesis, this controls the speed and working of the program. The default is 0. You may want to switch it to 1 depending if you are using sleep or clear functions. (more about that later.)
+
+<h3>Print</h3>
+
+This function is the heart of every python program. It follows this syntax:
+
+       void print(T a);
+
+The T means that it can handle any type, from boolean to string.
+
+<h3>Input</h3>
+
+This is likely one of the most popular python functions. It follows this syntax: 
+
+      string input(optional: string);
+
+Input returns a string, for example, I can do:
+
+       str l(input("Type in your name"));
+       print(l);
+And it will print out what i types into the console
+
+<h3>Random</h3>
+Slackerz doesn't have a random class, to random.randit(x) won't work, instead, it is random(optional int)
+
+<h3>Absolute Value</h3>
+This function gets the absolute value of an int. It follows this syntax:
+
+       int abs(int);
+You put in a number, and it gets the absolute value of it
+
+<h3>Char to str</h3>
+
+This converts a charachter into a string, (char is a variable type in c++)
+
+It follows this syntax:
+
+       string cstr(char a);
 
 
 <h1 id = "run"> Running the file: </h1>
-----
+
 (This is the procedure on windows, linux should be similar though)
 
 First, of course, you have to install a compiler, (for example [MSYS2](https://www.msys2.org/)) - follow the steps there
@@ -64,9 +111,7 @@ for example, if you were to use the template:
 
 to search up your file's path, right click the folder your file is in, and press copy as path. (or something similar to it) then paste it after the cd
 
-
-### Credits
-_______________________
+<h1 id = "credits">Credits</h1>
 
 [Actiniumn404](https://github.com/actiniumn404) - Help with the str class, header gaurds, and print, toint, and tostring.
 
