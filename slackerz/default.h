@@ -9,9 +9,6 @@ namespace slackerz{
 
     
     std::string input(std::string ask = "");//collects user input
-//
-
-    int random(int thing); //random
     
     std::string cstr(char a); //char to string
     
