@@ -13,7 +13,7 @@ Slackerz is very extensive, so it will taake a while to finish the guide.
 Packages:
 
 1. [Default package](#default)
-
+2. [Developer Package](#dev)
 
 [Running the program](#run)
 
@@ -87,6 +87,66 @@ They follow this syntax:
       string tostring (T a);
       float tofloat(H a);
 Any of these can transfer any (c++) datatype to the requested type 
+
+<h3>Strings</h3>
+
+Slackerz' string are different from typical strings, they follow this syntax:
+
+      str mystring("My string's value");
+
+A known issue with slackerz strings is that sometimes you may get an error similar to "No operator matches this operation" If this happens, do [stringname].v as the value, for example:
+
+      if(mystring.v == "Hi"){ // works
+            print("Hello!");
+      }
+
+      if(mystring == "Hi"){ // May give error 
+            print("Hello!");
+      }
+
+<h4>String operations</h4>
+Slackerz has many string operations. They are listed below:
+
+Slackerz string operations are highly based on python operations, so you can search these python operations there
+
+                string upper(); //Checks if a (slackerz) string is all uppercase
+
+                string lower() //Checks if a (slackerz) string is all lowercase
+
+                std::vector<std::string>  split(string x = " "); //Splits a string into a VECTOR, not a c++ list. Big difference
+
+                string capitilize(); Capitlizes the first letter of a string
+
+                bool isupper(); //chekcs if a string is uppercase
+
+                bool islower(); //checks if a string is lowercase
+
+                string convstr(); //converts the slackerz string into a c++ string
+
+                string center(int s, optional: string a = " "); //Returns centered string
+
+                string zfill(int length); Makes the string the desired length by filling it with zeros
+
+                string swapcase(); //swaps the case of the string
+
+                bool startswith(string a,optional: int b = 0,Optional: int c = 0); // Checks what does it start with
+
+<h1 id = "Dev">Developer Package:</h1>
+
+The dev package is pretty small. It gives developer tools that normal coders don't care about. Yuu can add it by putting: THis at the start of your code:
+
+      #include "slackerz/dev.h"
+
+THE DEV PACKAGE DOES NOT INCLUDE THE DEFAULT PACKAGE, You must put the default package header from above to add it.
+
+<h3>Turn off/on sync (beta)</h3>
+
+You can turn on/off sync with studio (c package) by putting the 1 or 0 in the paranthesis of the init_slackerz() function, but incase you are not using that, you can use these functions
+
+      void turnOffSync(); //turns off sync (default with init_slackerz())
+    
+      void turnOnSync(); //turns on sync (default without init_slackerz())
+
 
 
 <h1 id = "run"> Running the file: </h1>
