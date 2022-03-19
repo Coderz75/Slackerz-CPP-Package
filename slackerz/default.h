@@ -63,38 +63,38 @@ namespace slackerz{
 
 //print
     template <typename T>
-    void print(T a);
+    void print(T a, string x = "\n");
 
     template<>
-    void print<string>(std::string a){
-        std::cout << a + "\n";
+    void print<string>(std::string a, string x){
+        std::cout << a + x;
     }
     template<>
-    void print<float>(float a){
-        cout << to_string(a) + "\n";
+    void print<float>(float a, string x){
+        cout << to_string(a) + x;
     }
     template<>
 
-    void print<std::vector<string>>(std::vector<string> a){
+    void print<std::vector<string>>(std::vector<string> a, string x){
         for(int i=0; i < a.size(); i++)
         std::cout << a.at(i) << '\n';
     }
     template<>
-    void print<int>(int a){
-        cout << to_string(a) + "\n";
+    void print<int>(int a, string x){
+        cout << to_string(a) + x;
     }
     template<>
-    void print<char const*>(char const* a){
+    void print<char const*>(char const* a, string x){
         string l = str(a);
-        cout << l + "\n";
+        cout << l + x;
     }
     template<>
-    void print<slackerz::str>(slackerz::str a){
-        cout << a.convstr() + "\n";
+    void print<slackerz::str>(slackerz::str a, string x){
+        cout << a.convstr() + x;
     }
     template<>
-    void print<bool>(bool a){
-        cout << tostring(a) + "\n";
+    void print<bool>(bool a, string x){
+        cout << tostring(a) + x;
     }
 }
 
