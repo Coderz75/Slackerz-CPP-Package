@@ -25,6 +25,7 @@ namespace slackerz{
     }
     
     string input(std::string ask = ""){
+      cout << "\n";
       string x;
       cout << ask;
       getline(cin, x);
