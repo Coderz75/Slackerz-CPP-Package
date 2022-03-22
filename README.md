@@ -2,7 +2,7 @@
 
 This is a c++ package that makes c++ (much) easier
 
-This project is licensed underneath the [MIT LICENSE](https://github.com/Coderz75/Slackerz-Compiler/blob/main/slackerz/docs/LICENSE.md)
+This project is licensed underneath the [MIT LICENSE](./slackerz/docs/LICENSE.md)
 
 <b>THE GUIDE BELOW IS NOT COMPLETE!!</b>
 
@@ -134,9 +134,9 @@ Slackerz has many string operations. They are listed below:
 
 Slackerz string operations are highly based on python operations, so you can search these python operations there
 
-                string upper(); //Checks if a (slackerz) string is all uppercase
+                string upper(); //Converts a (slackerz) string is all uppercase
 
-                string lower() //Checks if a (slackerz) string is all lowercase
+                string lower() //Converts a (slackerz) string is all lowercase
 
                 std::vector<std::string>  split(string x = " "); //Splits a string into a VECTOR, not a c++ list. Big difference
 
