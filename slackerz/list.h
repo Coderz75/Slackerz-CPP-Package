@@ -8,16 +8,21 @@ using namespace std;
 namespace slackerz{
     class slist{
         public:
-            vector<string> v;
+            std::vector<string> v;
+
             slist(vector<string> a){
                 v = a;
             }
             void append(string a){
                 v.push_back(a);
             }
+            void insert(int place, string val){
+                v.insert(v.begin()+place,val);
+            }
             operator vector<string> () const { // C++ verison of __repr__
             	return v;
         	}
+            
     };
     template<typename T>
     int len(T a);
