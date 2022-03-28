@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "string.h"
+#include "list.h"
 
 namespace slackerz{
 
@@ -157,6 +158,11 @@ namespace slackerz{
     void print<bool>(bool a, string x){
         cout << tostring(a);
         std::cout << x;
+    }
+    template<>
+    void print<slist>(slist a, string x){
+        for(int i=0; i < a.v.size(); i++)
+        std::cout << a.v.at(i) << x;
     }
     
 }
