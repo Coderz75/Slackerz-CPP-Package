@@ -38,6 +38,9 @@ namespace slackerz{
             void remove(string a){
                 v.erase(std::remove(v.begin(), v.end(), a), v.end());
             }
+            void clear(){
+                v.clear();
+            }
             operator vector<string> () const { // C++ verison of __repr__
             	return v;
         	}
