@@ -41,6 +41,28 @@ namespace slackerz{
             void clear(){
                 v.clear();
             }
+
+            vector<string> copy(){return v;}
+
+            int count(string a){
+                int x = 0;
+                for(int i =0; i<v.size();i++){if (v[i] == a){x = x+1;}}
+                return x;
+            }
+
+            int index(string a){
+                for(int i = 0; i<v.size();i++){if(v[i] == a){return i;}}
+                return false;
+            }
+
+            void reverse(){
+                vector<string> a= {};
+                for (int i=v.size()-1; i>=0; i--){
+                    a.push_back(v[i]); 
+                }
+                v = a;
+            }
+
             operator vector<string> () const { // C++ verison of __repr__
             	return v;
         	}
