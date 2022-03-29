@@ -25,6 +25,14 @@ namespace slackerz{
                     v.push_back(a[i]);
                 }
             }
+
+            void remove(int a = -999999){
+                if(a != -999999){
+                    v.erase(v.begin()+a);
+                }else{
+                    v.pop_back();
+                }
+            }
             operator vector<string> () const { // C++ verison of __repr__
             	return v;
         	}
