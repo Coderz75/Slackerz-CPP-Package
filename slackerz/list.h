@@ -19,6 +19,12 @@ namespace slackerz{
             void insert(int place, string val){
                 v.insert(v.begin()+place,val);
             }
+
+            void extend(vector<string> a){
+                for(int i = 0; i< a.size();i++){
+                    v.push_back(a[i]);
+                }
+            }
             operator vector<string> () const { // C++ verison of __repr__
             	return v;
         	}
