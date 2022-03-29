@@ -2,6 +2,7 @@
 #include <string>
 #include <list>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -26,12 +27,16 @@ namespace slackerz{
                 }
             }
 
-            void remove(int a = -999999){
+            void pop(int a = -999999){
                 if(a != -999999){
                     v.erase(v.begin()+a);
                 }else{
                     v.pop_back();
                 }
+            }
+
+            void remove(string a){
+                v.erase(std::remove(v.begin(), v.end(), a), v.end());
             }
             operator vector<string> () const { // C++ verison of __repr__
             	return v;
