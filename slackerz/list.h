@@ -78,4 +78,8 @@ namespace slackerz{
     int len(string a){
         return a.length();
     }
+    template<>
+    int len(int a){
+        return to_string(a).length();
+    }
 }
