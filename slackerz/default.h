@@ -6,6 +6,8 @@
 #include "list.h"
 #include <pthread.h>
 
+using namespace slackerz::s;
+using namespace slackerz::i;
 namespace slackerz{
 
 
@@ -191,11 +193,14 @@ namespace slackerz{
         std::cout << x;
     }
     template<>
-    void print<slist>(slist a, string x){
+    void print(i::list a, string x){
         for(int i=0; i < a.v.size(); i++)
         std::cout << a.v.at(i) << x;
     }
-    
+    void print(s::list a, string x){
+        for(int i=0; i < a.v.size(); i++)
+        std::cout << a.v.at(i) << x;
+    }
 }
 
 #endif
