@@ -240,8 +240,6 @@ Once your ready, open command prompt (or terminal for linux) and run these comma
       g++ -o [program name] [file your running]
 
       .\[program name]
-      
-slackerz/SLACKERZ.cpp depends on where you put the slackerz folder, if you moved it, put it in the path you put it in
 
 for example, if you were to use the template:
 
