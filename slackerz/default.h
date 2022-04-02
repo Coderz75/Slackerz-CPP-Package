@@ -4,6 +4,7 @@
 #include <iostream>
 #include "string.h"
 #include "list.h"
+#include <pthread.h>
 
 namespace slackerz{
 
