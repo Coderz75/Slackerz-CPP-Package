@@ -2,6 +2,7 @@
 #define TIME_H
 #include "string.h"
 #include <thread>
+#include <ctime>
 
 namespace slackerz{
     void sleep(int milliseconds){
@@ -9,15 +10,15 @@ namespace slackerz{
       
     }
 }
+string a(){
+      time_t now = time(0);
+      string dt = ctime(&now);
+      return dt;
+  }
 
-string time(){
-        time_t rawtime;
-        struct tm * timeinfo;
-    
-        time (&rawtime);
-        timeinfo = localtime (&rawtime);
-        string s = asctime(timeinfo);
-        
-        return s;
+namespace slackerz{
+    string time(){
+      return a();
+    }
 }
 #endif
