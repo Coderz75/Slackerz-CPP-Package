@@ -3,24 +3,56 @@
 
 #include <iostream>
 #include "string.h"
+#include "list.h"
+#include <pthread.h>
 
 namespace slackerz{
 
 
     
-    std::string input(std::string ask = "");//collects user input
+    std::string input(std::string ask = ""){
+      cout << "\n";
+      string x;
+      cout << ask;
+      getline(cin, x);
+      return x;
+    }
     
-    std::string cstr(char a); //char to string
-    
-    void init_slackerz(int a= 0); //initilizes slackerz
-    
-    
-    int abs(int num); //gets absolute value of an int
+    string is(int num){
+      return to_string(num);
+    }
 
-    int random(int num = 9999999); // returns random int
+    std::vector<string> range(int num){
+      std::vector<string> so {};
+      int i = num-1;
+      while(i != 0){ 
+        so.push_back(is(i));
+        if (0>i){
+          i = i+1;
+        }else{
+          i = i-1;
+        }
+        
+      }
+      so.push_back(is(i));
+      reverse(so.begin(), so.end());
+      return so;
+    }
+    
+    void init_slackerz(int a= 0){ // initilizes lackerz
+        pthread_t threads[2];
+        ios_base::sync_with_stdio(a);
+    }
+    
+    
+    int abs(int num){
+        return abs(num);
+    }
 
-    std::vector<string> range(int num);
-
+    int random(int num = 99999){
+      int a = rand() % num;
+      return a;
+    }
 
 //to int
     template <typename U>
@@ -123,41 +155,45 @@ namespace slackerz{
 
     template<>
     void print<string>(std::string a, string x){
-        std::cout << x;
         std::cout << a;
+        std::cout << x;
     }
     template<>
     void print<float>(float a, string x){
-        std::cout << x;
         cout << to_string(a);
+        std::cout << x;
     }
     template<>
 
     void print<std::vector<string>>(std::vector<string> a, string x){
-        std::cout << x;
         for(int i=0; i < a.size(); i++)
         std::cout << a.at(i) << x;
     }
     template<>
     void print<int>(int a, string x){
-        std::cout << x;
         cout << to_string(a);
+        std::cout << x;
     }
     template<>
     void print<char const*>(char const* a, string x){
-        std::cout << x;
         string l = str(a);
         cout << l;
+        std::cout << x;
     }
     template<>
     void print<slackerz::str>(slackerz::str a, string x){
-        std::cout << x;
         cout << a.convstr();
+        std::cout << x;
     }
     template<>
     void print<bool>(bool a, string x){
-        std::cout << x;
         cout << tostring(a);
+        std::cout << x;
+    }
+    template<>
+    void print<slist>(slist a, string x){
+        for(int i=0; i < a.v.size(); i++)
+        std::cout << a.v.at(i) << x;
     }
     
 }

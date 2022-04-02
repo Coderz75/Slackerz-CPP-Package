@@ -237,7 +237,7 @@ Once your ready, open command prompt (or terminal for linux) and run these comma
 
       cd [your file's path]
 
-      g++ -o [program name] -I Path2Hello [Main file you are running] slackerz/SLACKERZ.cpp
+      g++ -o [program name] [file your running]
 
       .\[program name]
       
@@ -247,7 +247,7 @@ for example, if you were to use the template:
 
       cd [Directory]
 
-      g++ -o program -I Path2Hello main.cpp slackerz/SLACKERZ.cpp
+      g++ -o program main.cpp
 
       .\program
 

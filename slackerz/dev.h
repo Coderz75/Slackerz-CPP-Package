@@ -1,9 +1,14 @@
 
 #ifndef DEV_H
 #define DEV_H
+#include <iostream>
+
 namespace slackerz{
-    void turnOffSync(); //turns of sync (default)
-    
-    void turnOnSync(); //turns on sync
+    void turnOffSync(){
+        std::ios_base::sync_with_stdio(0);
+    }
+    void turnOnSync(){
+        std::ios_base::sync_with_stdio(1);
+    }
 }
 #endif

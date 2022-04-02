@@ -1,11 +1,24 @@
 #ifndef TIME_H
 #define TIME_H
-#include <string>
-#include "dev.h"
-
-std::string time();
+#include "string.h"
+#include <thread>
+#include <ctime>
 
 namespace slackerz{
-    void sleep(int milliseconds);
+    void sleep(int milliseconds){
+      std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+      
+    }
+}
+string a(){
+      time_t now = time(0);
+      string dt = ctime(&now);
+      return dt;
+  }
+
+namespace slackerz{
+    string time(){
+      return a();
+    }
 }
 #endif
