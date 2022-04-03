@@ -52,8 +52,12 @@ namespace slackerz{
     }
 
     int random(int num = 99999){
-      int a = rand() % num;
-      return a;
+        /* initialize random seed: */
+        srand (time(NULL));
+
+        /* generate secret number between 1 and 10: */
+        int a = rand() % num + 0;
+        return a;
     }
 
 //to int
