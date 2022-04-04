@@ -5,11 +5,16 @@
 #include "string.h"
 #include "list.h"
 #include <pthread.h>
+#include <ctime>
 
+bool init_called = false;
 using namespace slackerz::s;
 using namespace slackerz::i;
-namespace slackerz{
 
+void x(){
+    srand((unsigned) time(0));
+}
+namespace slackerz{
 
     
     std::string input(std::string ask = ""){
@@ -44,6 +49,8 @@ namespace slackerz{
     void init_slackerz(int a= 0){ // initilizes lackerz
         pthread_t threads[2];
         ios_base::sync_with_stdio(a);
+        x();
+        init_called = true;
     }
     
     
@@ -52,12 +59,17 @@ namespace slackerz{
     }
 
     int random(int num = 99999){
-        /* initialize random seed: */
-        srand (time(NULL));
+        try{
+            if(init_called == false){
+                throw "You need to call init_slackerz() to use random\n";
+            }
 
-        /* generate secret number between 1 and 10: */
-        int a = rand() % num + 0;
-        return a;
+            return rand() % num + 0;   
+        }
+        catch(const char* msg){
+            cerr << msg;
+            exit(1);
+        }
     }
 
 //to int
