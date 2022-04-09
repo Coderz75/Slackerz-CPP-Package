@@ -186,6 +186,8 @@ The clear function clears the console/teminal. This works on windows and linux. 
 
 When using this, it is reccomended to turn on sync, or to put init_slackerz(1); at the front of your code
 
+Clear should work for most nixes, but on windows you need windows 10 or above
+
 It follows this syntax:
 
       void clear();
