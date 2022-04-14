@@ -4,7 +4,7 @@
 
 namespace slackerz{
     void clear(){
-      std::cout << "\x1B[2J\x1B[H";
+      std::cout << "\e[1;1H\e[2J";
     }
 }
 #endif
