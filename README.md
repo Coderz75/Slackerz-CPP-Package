@@ -94,7 +94,11 @@ Input returns a string, for example, I can do:
 And it will print out what i types into the console
 
 <h3>Random</h3>
-Slackerz doesn't have a random class, to random.randit(x) won't work, instead, it is random(optional int)
+Youd don't need to do import random;
+
+Just like python. Call it by:
+
+      random.randint(optional int max); //Random int, doesn't currently except a minimum
 
 <h3>Absolute Value</h3>
 This function gets the absolute value of an int. It follows this syntax:
@@ -210,13 +214,22 @@ It follows this syntax
 
       void sleep(int millisecond);
 
-<h3>Time</h3>
+Call it by:
+
+      time.sleep(1000); //To sleep for one second
+
+<h3>LocalTime</h3>
 
 Gives the current time as a string. (for the native processor.) When using online compilers, it may give different times.
 
 It follows this syntax
 
-      string time();
+      string localtime();
+
+Call it by:
+
+      time.localtime();
+
 
 
 <h1 id = "run"> Running the file: </h1>

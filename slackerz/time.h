@@ -4,21 +4,25 @@
 #include <thread>
 #include <ctime>
 
-namespace slackerz{
-    void sleep(int milliseconds){
-      std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-      
-    }
-}
 string a(){
       time_t now = time(0);
       string dt = ctime(&now);
       return dt;
-  }
+}
 
 namespace slackerz{
-    string time(){
-      return a();
-    }
+  class time{
+    public:
+      void sleep(int milliseconds){
+        std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+        
+      }
+      string localtime(){
+        return a();
+      }
+  };
+}
+
+namespace slackerz{
 }
 #endif
