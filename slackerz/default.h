@@ -57,20 +57,22 @@ namespace slackerz{
     int abs(int num){
         return abs(num);
     }
+class random{
+    public:
+        int randint(int num = 99999){
+            try{
+                if(init_called == false){
+                    throw "You need to call init_slackerz() to use random\n";
+                }
 
-    int random(int num = 99999){
-        try{
-            if(init_called == false){
-                throw "You need to call init_slackerz() to use random\n";
+                return rand() % num + 0;   
             }
-
-            return rand() % num + 0;   
+            catch(const char* msg){
+                cerr << msg;
+                exit(1);
+            }
         }
-        catch(const char* msg){
-            cerr << msg;
-            exit(1);
-        }
-    }
+};
 
 //to int
     template <typename U>
