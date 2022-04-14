@@ -8,6 +8,7 @@
 #include <ctime>
 
 bool init_called = false;
+bool sync = true;
 using namespace slackerz::s;
 using namespace slackerz::i;
 
@@ -50,6 +51,7 @@ namespace slackerz{
         pthread_t threads[2];
         ios_base::sync_with_stdio(a);
         x();
+        sync = a;
         init_called = true;
     }
     
