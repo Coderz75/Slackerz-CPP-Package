@@ -33,19 +33,25 @@ namespace slackerz{
         		}
                 std::vector<std::string>  split(string x = " "){
                     std::vector<std::string> so {};
-                    string s = v;
-                    string delim = x;
-                    auto start = 0U;
-                    auto end = s.find(delim);
+                    string* s;
+                    s = new string;
+                    *s = v;
+                    string* delim;
+                    delim = new string;
+                    *delim = x;
+                    auto start = 0;
+                    auto end = (*s).find(*delim);
                     while (end != std::string::npos)
                     {
-                        string m = s.substr(start, end - start);
+                        string m = (*s).substr(start, end - start);
                         so.push_back(m);
-                        start = end + delim.length();
-                        end = s.find(delim, start);
+                        start = end + (*delim).length();
+                        end = (*s).find(*delim, start);
                     }
                 
-                    so.push_back(s.substr(start, end));
+                    so.push_back((*s).substr(start, end));
+                    delete delim;
+                    delete s;
                     return so;
                 }
                 string capitilize(){
@@ -54,38 +60,49 @@ namespace slackerz{
                     return a;
                 }
                 bool isupper(){
-                    string m = v;
-                    for (int i = 0; i < m.length(); i++) {
-                      if(::isupper(m[i])){  
+                    string* m;
+                    m = new string;
+                    *m = v;
+                    for (int i = 0; i < (*m).length(); i++) {
+                      if(::isupper((*m)[i])){  
                       }else{
+                          delete m;
                           return false;
                       }
                     }
+                    delete m;
                     return true;
                 }
                 bool islower(){
-                    string m = v;
-                    for (int i = 0; i < m.length(); i++) {
-                      if(::islower(m[i])){  
+                    string* m;
+                    m = new string;
+                    *m = v;
+                    for (int i = 0; i < (*m).length(); i++) {
+                      if(::islower((*m)[i])){  
                       }else{
+                          delete m;
                           return false;
                       }
                     }
+                    delete m;
                     return true;
                 }
                 string convstr(){
                     return v;
                 }
                 string center(int s, string a = " "){
-                    int spaces = s - v.length() ;
-                    spaces = spaces/2;
+                    int* spaces ;
+                    spaces = new int;
+                    *spaces = s - v.length();
+                    *spaces = *spaces/2;
                     string returnval = v;
-                    for(int i = 0; i<spaces; i++){
+                    for(int i = 0; i<*spaces; i++){
                         returnval = a + returnval;
                     }
-                    for(int i = 0; i<spaces; i++){
+                    for(int i = 0; i<*spaces; i++){
                         returnval = returnval+a;
                     }
+                    delete spaces;
                     return returnval;
                     
                 }

@@ -31,20 +31,23 @@ namespace slackerz{
     }
 
     std::vector<string> range(int num){
-      std::vector<string> so {};
-      int i = num-1;
-      while(i != 0){ 
-        so.push_back(is(i));
-        if (0>i){
-          i = i+1;
-        }else{
-          i = i-1;
+        std::vector<string> so {};
+        int* i ;
+        i = new int;
+        *i = num-1;
+        while(*i != 0){ 
+            so.push_back(is(*i));
+            if (0>*i){
+            *i = *i+1;
+            }else{
+            *i = *i-1;
+            }
+            
         }
-        
-      }
-      so.push_back(is(i));
-      reverse(so.begin(), so.end());
-      return so;
+        so.push_back(is(*i));
+        delete i;
+        reverse(so.begin(), so.end());
+        return so;
     }
     
     void init_slackerz(int a= 0){ // initilizes lackerz

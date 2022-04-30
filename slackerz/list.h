@@ -57,11 +57,12 @@ namespace slackerz{
                 }
 
                 void reverse(){
-                    vector<string> a= {};
+                    vector<string> *a;
+                    a = new vector<string>;
                     for (int i=v.size()-1; i>=0; i--){
-                        a.push_back(v[i]); 
+                        (*a).push_back(v[i]); 
                     }
-                    v = a;
+                    v = *a;
                 }
 
                 operator vector<string> () const { // C++ verison of __repr__
@@ -121,11 +122,12 @@ namespace slackerz{
                 }
 
                 void reverse(){
-                    vector<int> a= {};
+                    vector<int>* a;
+                    a = new vector<int>;
                     for (int i=v.size()-1; i>=0; i--){
-                        a.push_back(v[i]); 
+                        (*a).push_back(v[i]); 
                     }
-                    v = a;
+                    v = *a;
                 }
 
                 operator vector<int> () const { // C++ verison of __repr__
