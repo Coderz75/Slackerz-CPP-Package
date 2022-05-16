@@ -104,6 +104,10 @@ Just like python. Call it by:
 This function gets the absolute value of an int. It follows this syntax:
 
        int abs(int);
+You use it by:
+
+      abs(-4); // returns 4
+
 You put in a number, and it gets the absolute value of it
 
 <h3>Conversions:</h3>
@@ -138,15 +142,15 @@ Slackerz has many string operations. They are listed below:
 
 Slackerz string operations are highly based on python operations, so you can search these python operations there
 
-                string upper(); //Converts a (slackerz) string is all uppercase
+                string upper(); //Converts a (slackerz) string to all uppercase
 
-                string lower() //Converts a (slackerz) string is all lowercase
+                string lower() //Converts a (slackerz) string to all lowercase
 
-                std::vector<std::string>  split(string x = " "); //Splits a string into a VECTOR, not a c++ list. Big difference
+                std::vector<std::string>  split(string x = " "); //Splits a string into a VECTOR, not a c++ list. Big difference. (slackerz's list uses vectors to calculate types)
 
                 string capitilize(); Capitlizes the first letter of a string
 
-                bool isupper(); //chekcs if a string is uppercase
+                bool isupper(); //checks if a string is uppercase
 
                 bool islower(); //checks if a string is lowercase
 
@@ -159,6 +163,21 @@ Slackerz string operations are highly based on python operations, so you can sea
                 string swapcase(); //swaps the case of the string
 
                 bool startswith(string a,optional: int b = 0,Optional: int c = 0); // Checks what does it start with
+
+<h3>Lists</h3>
+
+Lists are proven to work, but despite being put in the main branch, some functions and calls will be subject to change in later releases
+
+Slackerz lists follows a somewhat similar syntax to it's string, but with a few differences.
+
+Slackerz lists only allows one data type for a list
+
+      s::list List({"Hello","List"}); //string lists
+      i::list Lisr2({3,5,6}) //integer lists
+
+As with strings, sometime you may have to put List.v for it to work
+
+The functions documentations for slackerz lists will come later on
 
 <h1 id = "dev">Developer Package:</h1>
 

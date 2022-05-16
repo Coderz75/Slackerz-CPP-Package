@@ -8,8 +8,6 @@
 
 bool init_called = false;
 bool sync = true;
-using namespace slackerz::s;
-using namespace slackerz::i;
 
 void x(){
     srand((unsigned) time(0));
@@ -193,6 +191,12 @@ class random{
         std::cout << a.at(i) << x;
     }
     template<>
+
+    void print<std::vector<int>>(std::vector<int> a, string x){
+        for(int i=0; i < a.size(); i++)
+        std::cout << a.at(i) << x;
+    }
+    template<>
     void print<int>(int a, string x){
         cout << to_string(a);
         std::cout << x;
@@ -213,12 +217,8 @@ class random{
         cout << tostring(a);
         std::cout << x;
     }
-    template<>
-    void print(i::list a, string x){
-        for(int i=0; i < a.v.size(); i++)
-        std::cout << a.v.at(i) << x;
-    }
-    void print(s::list a, string x){
+
+    void print(list a, string x){
         for(int i=0; i < a.v.size(); i++)
         std::cout << a.v.at(i) << x;
     }

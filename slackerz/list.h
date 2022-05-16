@@ -7,34 +7,63 @@
 using namespace std;
 
 namespace slackerz{
-    namespace s{
         class list{
+            private:
+                string type;
             public:
                 std::vector<string> v;
+                std::vector<int> v2;
 
                 list(vector<string> a){
                     v = a;
+                    type = "string";
                 }
-                void append(string a){
-                    v.push_back(a);
+                list(vector<int> a){
+                    v2 = a;
+                    type="int";
                 }
-                void insert(int place, string val){
-                    v.insert(v.begin()+place,val);
+                void append(string val = "", int val2 = 0){
+                    if (type == "string"){
+                        v.push_back(val);
+                    }else if(type == "int"){
+                        v2.push_back(val2);
+                    }
+                    
+                }
+                void insert(int place, string val = "", int val2 = 0){
+                    if (type == "string"){v.insert(v.begin()+place,val);}
+                    else if(type == "int"){v2.insert(v2.begin()+place,val2);}
                 }
 
-                void extend(vector<string> a){
-                    for(int i = 0; i< a.size();i++){
-                        v.push_back(a[i]);
+                void extend(vector<string> a = {}, vector<int> b= {}){
+                    if (type == "string"){
+                        for(int i = 0; i< a.size();i++){
+                            v.push_back(a[i]);
+                        }
+                    }else if( type == "int"){
+                        for(int i = 0; i< b.size();i++){
+                            v2.push_back(b[i]);
+                        }
                     }
                 }
 
                 void pop(int a = -999999){
+                    if (type == "string"){
                     if(a != -999999){
                         v.erase(v.begin()+a);
                     }else{
                         v.pop_back();
                     }
+                    }else if (type == "int"){
+                        if(a != -999999){
+                            v2.erase(v2.begin()+a);
+                        }else{
+                            v2.pop_back();
+                        }   
+                    }
+
                 }
+                //CONVERTED UNTIL HERE
 
                 void remove(string a){
                     v.erase(std::remove(v.begin(), v.end(), a), v.end());
@@ -70,80 +99,11 @@ namespace slackerz{
                 }
                 
         };
-    }
 
-    namespace i{
-        class list{
-            public:
-                std::vector<int> v;
-
-                list(vector<int> a){
-                    v = a;
-                }
-                void append(int a){
-                    v.push_back(a);
-                }
-                void insert(int place, int val){
-                    v.insert(v.begin()+place,val);
-                }
-
-                void extend(vector<int> a){
-                    for(int i = 0; i< a.size();i++){
-                        v.push_back(a[i]);
-                    }
-                }
-
-                void pop(int a = -999999){
-                    if(a != -999999){
-                        v.erase(v.begin()+a);
-                    }else{
-                        v.pop_back();
-                    }
-                }
-
-                void remove(int a){
-                    v.erase(std::remove(v.begin(), v.end(), a), v.end());
-                }
-                void clear(){
-                    v.clear();
-                }
-
-                vector<int> copy(){return v;}
-
-                int count(int a){
-                    int x = 0;
-                    for(int i =0; i<v.size();i++){if (v[i] == a){x = x+1;}}
-                    return x;
-                }
-
-                int index(int a){
-                    for(int i = 0; i<v.size();i++){if(v[i] == a){return i;}}
-                    return false;
-                }
-
-                void reverse(){
-                    vector<int>* a;
-                    a = new vector<int>;
-                    for (int i=v.size()-1; i>=0; i--){
-                        (*a).push_back(v[i]); 
-                    }
-                    v = *a;
-                }
-
-                operator vector<int> () const { // C++ verison of __repr__
-                    return v;
-                }
-                
-        };
-    }
     template<typename T>
     int len(T a);
     template<>
-    int len(i::list a){
-        return a.v.size();
-    }
-    template<>
-    int len(s::list a){
+    int len(list a){
         return a.v.size();
     }
     template<>
