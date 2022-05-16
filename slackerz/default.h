@@ -4,7 +4,6 @@
 #include <iostream>
 #include "string.h"
 #include "list.h"
-#include <pthread.h>
 #include <ctime>
 
 bool init_called = false;
@@ -51,7 +50,6 @@ namespace slackerz{
     }
     
     void init_slackerz(int a= 0){ // initilizes lackerz
-        pthread_t threads[2];
         ios_base::sync_with_stdio(a);
         x();
         sync = a;
