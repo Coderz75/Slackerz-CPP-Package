@@ -217,11 +217,17 @@ class random{
         cout << tostring(a);
         std::cout << x;
     }
-
+    template<>
     void print(list a, string x){
-        for(int i=0; i < a.v.size(); i++)
-        std::cout << a.v.at(i) << x;
+        if(a.type == "string"){
+            for(int i=0; i < a.v.size(); i++)
+            std::cout << a.v.at(i) << x;
+        }else if(a.type == "int"){
+            for(int i=0; i < a.v2.size(); i++)
+            std::cout << a.v2.at(i) << x;
+        }
     }
+
 }
 
 #endif

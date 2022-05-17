@@ -8,9 +8,8 @@ using namespace std;
 
 namespace slackerz{
         class list{
-            private:
-                string type;
             public:
+                string type;
                 std::vector<string> v;
                 std::vector<int> v2;
 
@@ -63,25 +62,40 @@ namespace slackerz{
                     }
 
                 }
-                //CONVERTED UNTIL HERE
 
-                void remove(string a){
-                    v.erase(std::remove(v.begin(), v.end(), a), v.end());
+                void remove(string a = "", int b = 0){
+                    if (type == "string"){
+                        v.erase(std::remove(v.begin(), v.end(), a), v.end());
+                    }else if(type == "int"){
+                        vector<int>::iterator new_end;
+                        v2.erase(std::remove(v2.begin(), v2.end(), b), v2.end());
+                    }
                 }
                 void clear(){
                     v.clear();
+                    v2.clear();
                 }
 
                 vector<string> copy(){return v;}
 
-                int count(string a){
+                vector<int> copy(int i = 0){return v2;}
+
+                int count(string a = "", int b = 0){
                     int x = 0;
-                    for(int i =0; i<v.size();i++){if (v[i] == a){x = x+1;}}
+                    if (type == "string"){
+                        for(int i =0; i<v.size();i++){if (v[i] == a){x = x+1;}}   
+                    }else if(type == "int"){
+                        for(int i =0; i<v2.size();i++){if (v2[i] == b){x = x+1;}}
+                    }
                     return x;
                 }
 
-                int index(string a){
-                    for(int i = 0; i<v.size();i++){if(v[i] == a){return i;}}
+                int index(string a = "", int b = 0){
+                    if (type == "string"){
+                        for(int i = 0; i<v.size();i++){if(v[i] == a){return i;}}
+                    } else if (type == "int"){
+                        for(int i = 0; i<v2.size();i++){if(v2[i] == b){return i;}}
+                    }
                     return false;
                 }
 
@@ -92,10 +106,19 @@ namespace slackerz{
                         (*a).push_back(v[i]); 
                     }
                     v = *a;
+                    vector<int> *b;
+                    b = new vector<int>;
+                    for (int i=v2.size()-1; i>=0; i--){
+                        (*b).push_back(v2[i]); 
+                    }
+                    v2 = *b;
                 }
 
                 operator vector<string> () const { // C++ verison of __repr__
                     return v;
+                }
+                operator vector<int> () const { // C++ verison of __repr__
+                    return v2;
                 }
                 
         };

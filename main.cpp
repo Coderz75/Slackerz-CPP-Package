@@ -7,6 +7,6 @@ int main() {
     print("Cool right?");
     slackerz::list a({4,5,6});
     slackerz::list b({"hello","como","estas"});
-    print(a.v2);
-    print(b.v);
+    print(a);
+    print(b);
 }
