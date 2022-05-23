@@ -179,9 +179,9 @@ Slackerz string operations are highly based on python operations, so you can sea
 
 Lists are proven to work, but despite being put in the main branch, some functions and calls will be subject to change in later releases
 
-Slackerz lists follows a somewhat similar syntax to it's string, but with a few differences.
+Slackerz lists follows a somewhat similar syntax to  strings, but with a few differences.
 
-Slackerz lists only allows one data type for a list
+Slackerz lists only allows one data type per a list
 
       slackerz::list List({"Hello","List"}); //string lists
       slackerz::list Lisr2({3,5,6}); //integer lists
