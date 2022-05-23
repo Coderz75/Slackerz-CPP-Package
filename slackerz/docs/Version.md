@@ -1,4 +1,4 @@
-Version: Beta 10
+Version: Beta 11
 
 Source: https://github.com/Coderz75/Slackerz-Compiler/tree/test
 
