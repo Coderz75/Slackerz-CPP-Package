@@ -282,8 +282,8 @@ Call it by:
 
 
 ```
-```sh
 <h1 id = "run"> Running the file: </h1>
+```sh
 
 (This is the procedure on windows, linux should be similar though)
 
