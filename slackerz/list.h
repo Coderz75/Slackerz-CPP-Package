@@ -33,7 +33,19 @@ namespace slackerz{
                     if (type == "string"){v.insert(v.begin()+place,val);}
                     else if(type == "int"){v2.insert(v2.begin()+place,val2);}
                 }
-
+                void extend(slackerz::list x){
+                    vector<string> a = x.v;
+                    vector<int> b = x.v2;
+                    if (x.type == "string"){
+                        for(int i = 0; i< a.size();i++){
+                            v.push_back(a[i]);
+                        }
+                    }else if( x.type == "int"){
+                        for(int i = 0; i< b.size();i++){
+                            v2.push_back(b[i]);
+                        }
+                    }
+                }
                 void extend(vector<string> a = {}, vector<int> b= {}){
                     if (type == "string"){
                         for(int i = 0; i< a.size();i++){

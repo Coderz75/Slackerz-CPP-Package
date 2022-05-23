@@ -1,5 +1,6 @@
 # SLACKERZ!!!!!
 
+
 This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](./slackerz/docs/LICENSE.md)
@@ -22,6 +23,8 @@ Packages:
 [Running the program](#run)
 
 [Credits](#credits)
+
+```cpp
 
 <h1 id = "start">Getting started</h1>
 
@@ -91,7 +94,7 @@ Input returns a string, for example, I can do:
 
        str l(input("Type in your name"));
        print(l);
-And it will print out what i types into the console
+And it will print out what I type into the console
 
 <h3>Random</h3>
 Youd don't need to do import random;
@@ -138,9 +141,17 @@ A known issue with slackerz strings is that sometimes you may get an error simil
       }
 
 <h4>String operations</h4>
+You can call them by doing mystring.operation(); An example is
+
+
+      str Mystr("Hello");
+      print(Mystr.lower());
+
+
 Slackerz has many string operations. They are listed below:
 
 Slackerz string operations are highly based on python operations, so you can search these python operations there
+
 
                 string upper(); //Converts a (slackerz) string to all uppercase
 
@@ -172,12 +183,32 @@ Slackerz lists follows a somewhat similar syntax to it's string, but with a few 
 
 Slackerz lists only allows one data type for a list
 
-      s::list List({"Hello","List"}); //string lists
-      i::list Lisr2({3,5,6}) //integer lists
+      slackerz::list List({"Hello","List"}); //string lists
+      slackerz::list Lisr2({3,5,6}); //integer lists
 
-As with strings, sometime you may have to put List.v for it to work
+As with strings, sometime you may have to put List.v (string lists) or List.v2 (int lists) for it to work
 
-The functions documentations for slackerz lists will come later on
+
+                void append(val); //appends lists with a value (one parameter) 
+
+                void insert(int place, val);//Inserts a value in a place
+
+                void extend(slackerz::list OR std::vector); // extend two lists together into the main one
+
+
+                void pop(optional place);//deletes a value of the list
+
+                void remove(val);// removes all instances of a certain value from a list
+                void clear();//clears the list
+
+                vector<string> copy(); //returns a copy of the list (but just following the v or v2 directions (mentioned above) will do the same thing).
+                //Additional note, if you are using an int list, it would be best for you to put list.copy(1); to make sure u get the right list
+
+                int count(val); //counts how many instances of a value occurs in a list
+
+                int index(val); //Finds the index of the first item in the list that was entered
+
+                void reverse(); //reverses the order of the list
 
 <h1 id = "dev">Developer Package:</h1>
 
@@ -250,7 +281,8 @@ Call it by:
       time.localtime();
 
 
-
+```
+```sh
 <h1 id = "run"> Running the file: </h1>
 
 (This is the procedure on windows, linux should be similar though)
@@ -269,7 +301,7 @@ Make sure you added the directory to your path
 
 Once your ready, open command prompt (or terminal for linux) and run these commands:
 
-      cd [your file's path]
+      cd [your file path]
 
       g++ -o [program name] [file your running]
 
@@ -292,3 +324,4 @@ to search up your file's directory, right click the folder your file is in, and 
 [Actiniumn404](https://github.com/actiniumn404) - Help with the str class, header gaurds, and print, toint, and tostring.
 
 [Coderz75](https://github.com/coderz75) - Main bulk
+```
