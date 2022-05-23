@@ -282,9 +282,9 @@ Call it by:
 
 
 ```
-```sh
 <h1 id = "run"> Running the file: </h1>
 
+```sh
 (This is the procedure on windows, linux should be similar though)
 
 First, of course, you have to install a compiler, (for example [MSYS2](https://www.msys2.org/)) - follow the steps there
