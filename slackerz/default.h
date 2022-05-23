@@ -8,6 +8,7 @@
 
 bool init_called = false;
 bool sync = true;
+using namespace slackerz;
 
 void x(){
     srand((unsigned) time(0));

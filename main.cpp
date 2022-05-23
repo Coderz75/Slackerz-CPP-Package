@@ -1,5 +1,5 @@
 #include "slackerz/default.h"
-using namespace slackerz;
+
 
 int main() {
     init_slackerz();
