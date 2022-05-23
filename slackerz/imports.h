@@ -1,6 +1,10 @@
 #ifndef IMPORTS_H
 #define IMPORTS_H
+#include <iostream>
+
 namespace slackerz{
-    void clear(); //clears console (NOT IN PYTHON)
+    void clear(){
+      std::cout << "\e[1;1H\e[2J";
+    }
 }
 #endif
