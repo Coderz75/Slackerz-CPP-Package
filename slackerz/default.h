@@ -1,14 +1,16 @@
-#ifndef DEFAULT_H
-#define DEFAULT_H
+#ifndef _DEFAULT_H_
+#define _DEFAULT_H_
 
 #include <iostream>
 #include "string.h"
 #include "list.h"
 #include <ctime>
+#define or ||
+#define and &&
 
 bool init_called = false;
-bool sync = true;
 using namespace slackerz;
+
 
 void x(){
     srand((unsigned) time(0));
@@ -51,7 +53,7 @@ namespace slackerz{
     void init_slackerz(int a= 0){ // initilizes lackerz
         ios_base::sync_with_stdio(a);
         x();
-        sync = a;
+        bool sync = a;
         init_called = true;
     }
     
@@ -221,13 +223,16 @@ class random{
     template<>
     void print(slackerz::list a, string x){
         if(a.type == "string"){
-            for(int i=0; i < a.v.size(); i++)
-            std::cout << a.v.at(i) << x;
+            for(int i=0; i < a.v.size(); i++){
+                std::cout << a.v[i] << x;
+            }
         }else if(a.type == "int"){
-            for(int i=0; i < a.v2.size(); i++)
-            std::cout << a.v2.at(i) << x;
+            for(int i=0; i < a.v2.size(); i++){
+                std::cout << a.v2[i] << x;
+            }
         }
-    }    
+    }
+
     void print(){
         cout << "\n";
     }

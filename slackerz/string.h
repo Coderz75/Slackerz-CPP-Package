@@ -31,7 +31,7 @@ namespace slackerz{
     			operator std::string () const { // C++ verison of __repr__
             		return v;
         		}
-                std::vector<std::string>  split(string x = " "){
+                std::vector<std::string>  split(string x = " ", int m = false){
                     std::vector<std::string> so {};
                     string* s;
                     s = new string;
@@ -41,18 +41,34 @@ namespace slackerz{
                     *delim = x;
                     auto start = 0;
                     auto end = (*s).find(*delim);
-                    while (end != std::string::npos)
-                    {
-                        string m = (*s).substr(start, end - start);
-                        so.push_back(m);
-                        start = end + (*delim).length();
-                        end = (*s).find(*delim, start);
-                    }
+                    if (m != false){
+
+                        int it = 0;
+                        while (end != std::string::npos && it < m)
+                        {
+                            string m = (*s).substr(start, end - start);
+                            so.push_back(m);
+                            start = end + (*delim).length();
+                            end = (*s).find(*delim, start);
+                            it = it+1;
+                        }
+                    }else{
+                        while (end != std::string::npos)
+                        {
+                            string m = (*s).substr(start, end - start);
+                            so.push_back(m);
+                            start = end + (*delim).length();
+                            end = (*s).find(*delim, start);
+                        }
+                
+
                 
                     so.push_back((*s).substr(start, end));
                     delete delim;
                     delete s;
                     return so;
+                  }
+
                 }
                 string capitilize(){
                     string a = v;
