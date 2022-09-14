@@ -91,6 +91,7 @@ And to print on the same line:
 also, print is very similar to python, so you can also concatinate via commas:
 ```cpp
       print("Hello",1,3,4,True,"Nice",noend)
+      
 ```
 <h3>Input</h3>
 
