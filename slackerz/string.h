@@ -68,7 +68,7 @@ namespace slackerz{
                     delete s;
                     return so;
                   }
-
+                return{v};
                 }
                 string capitilize(){
                     string a = v;

@@ -5,12 +5,15 @@
 #include "string.h"
 #include "list.h"
 #include <ctime>
-#define or ||
-#define and &&
+#include "print.h"
 
 bool init_called = false;
 using namespace slackerz;
-
+#ifdef _MSC_VER 
+	#define not !=
+	#define and &&
+	#define or ||
+#endif
 
 void x(){
     srand((unsigned) time(0));
@@ -173,69 +176,7 @@ class random{
         return tofloat(k);
     }
 
-//print
-    template <typename T>
-    void print(T a, string x = "\n");
 
-    template<>
-    void print<string>(std::string a, string x){
-        std::cout << a;
-        std::cout << x;
-    }
-    template<>
-    void print<float>(float a, string x){
-        cout << to_string(a);
-        std::cout << x;
-    }
-    template<>
-
-    void print<std::vector<string>>(std::vector<string> a, string x){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << x;
-    }
-    template<>
-
-    void print<std::vector<int>>(std::vector<int> a, string x){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << x;
-    }
-    template<>
-    void print<int>(int a, string x){
-        cout << to_string(a);
-        std::cout << x;
-    }
-    template<>
-    void print<char const*>(char const* a, string x){
-        string l = str(a);
-        cout << l;
-        std::cout << x;
-    }
-    template<>
-    void print<slackerz::str>(slackerz::str a, string x){
-        cout << a.convstr();
-        std::cout << x;
-    }
-    template<>
-    void print<bool>(bool a, string x){
-        cout << tostring(a);
-        std::cout << x;
-    }
-    template<>
-    void print(slackerz::list a, string x){
-        if(a.type == "string"){
-            for(int i=0; i < a.v.size(); i++){
-                std::cout << a.v[i] << x;
-            }
-        }else if(a.type == "int"){
-            for(int i=0; i < a.v2.size(); i++){
-                std::cout << a.v2[i] << x;
-            }
-        }
-    }
-
-    void print(){
-        cout << "\n";
-    }
 
 }
 
