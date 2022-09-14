@@ -4,3 +4,4 @@ int main() {
     init_slackerz(); //Initilizes slackerz. Not required though. Doing so speed up the program, but may increase time before it starts. You may use this on your choosing
     print("Welcome to Slackerz!"); // WELCOME TO SLACKERZ!!!! GET CODING!!!
 }   
+

@@ -19,8 +19,25 @@ namespace slackerz{
                 }
                 list(vector<int> a){
                     v2 = a;
-                    type="int";
+                    type = "int";
                 }
+                list(std::list<int> a){
+                    std::vector<int> result;
+                    for (int &c: a) {
+                        result.push_back(c);
+                    }
+                    v2 = result;
+                    type = "int";
+                }
+                list(std::list<string> a){
+                    std::vector<string> result;
+                    for (string &c: a) {
+                        result.push_back(c);
+                    }
+                    v = result;
+                    type = "string";
+                }
+
                 void append(string val = "", int val2 = 0){
                     if (type == "string"){
                         v.push_back(val);
@@ -125,20 +142,13 @@ namespace slackerz{
                     }
                     v2 = *b;
                 }
-
-                operator vector<string> () const { // C++ verison of __repr__
-                    return v;
-                }
-                operator vector<int> () const { // C++ verison of __repr__
-                    return v2;
-                }
                 
         };
 
     template<typename T>
     int len(T a);
     template<>
-    int len(list a){
+    int len(slackerz::list a){
         return a.v.size();
     }
     template<>
