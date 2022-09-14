@@ -73,12 +73,11 @@ You may put a 1 or a 0 in the parenthesis, this controls the speed and working o
 
 This function is the heart of every python program. It follows this syntax:
 ```cpp
-       void print(T a, optional: string end = "\n");
+       void print(T a, ... ,  optional:: noend);
 ```
 
 The T means that it can handle any type, from boolean to string.
 
-The end varaible is optional, this starts a new line
 
 for example, to print on a new line:
 ```cpp
@@ -86,7 +85,12 @@ for example, to print on a new line:
 ```
 And to print on the same line:
 ```cpp
-      print("hello","");
+      print("hello",noend);
+```
+
+also, print is very similar to python, so you can also concatinate via commas:
+```cpp
+      print("Hello",1,3,4,True,"Nice",noend)
 ```
 <h3>Input</h3>
 
