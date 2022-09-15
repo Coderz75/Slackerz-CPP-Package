@@ -15,7 +15,9 @@ using namespace slackerz;
 	#define or ||
 #endif
 
-void x(){
+namespace s = slackerz;
+
+static void x(){
     srand((unsigned) time(0));
 }
 namespace slackerz{
@@ -64,7 +66,7 @@ namespace slackerz{
     int abs(int num){
         return abs(num);
     }
-class random{
+class r{
     public:
         int randint(int num = 99999){
             try{
@@ -79,8 +81,21 @@ class random{
                 exit(1);
             }
         }
-};
+        int randint(int min, int max){
+            try{
+                if(init_called == false){
+                    throw "You need to call init_slackerz() to use random\n";
+                }
 
+                return rand()%(max-min + 1) + min;
+            }
+            catch(const char* msg){
+                cerr << msg;
+                exit(1);
+            }
+        }
+};
+r random;
 //to int
     template <typename U>
     int toint(U something);

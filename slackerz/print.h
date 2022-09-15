@@ -1,6 +1,8 @@
+#include "default.h"
+
 namespace slackerz{
     //print
-	#define noend 0111101111
+	string noend = "01101110~%~01101111 01100101~%~01101110~%~01100100 ";
 
     static void prints(std::string a, string x=""){
         std::cout << a;
@@ -64,11 +66,12 @@ namespace slackerz{
         std::cout<<std::endl;
     }
 
-    void print(int arg) {
+    void print(string arg) {
 		if(arg != noend){
-			prints("using int func");
 			prints(arg);
-		}
+		}else{
+            cout << "\b";
+        }
     }
     template<typename First, typename ... Strings>
     void print(First arg, const Strings&... rest) {
