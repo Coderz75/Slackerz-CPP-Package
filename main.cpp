@@ -3,8 +3,6 @@
 int main() {
     init_slackerz();
     print("Welcome to Slackerz!");
-    while(true){
-        print(s::random.randint(1,99999),noend);
-    }
+    print(34533533,444532434435,43534354435);
 }   
 
