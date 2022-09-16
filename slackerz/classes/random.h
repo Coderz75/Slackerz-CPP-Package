@@ -1,7 +1,7 @@
 #ifndef DEFAULT_H
 #define DEFAULT_H
-
-#include "default.h"
+#include "global.h"
+#include <iostream>
 
 namespace slackerz{
 class r{

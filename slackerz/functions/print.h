@@ -1,3 +1,6 @@
+#ifndef PRINT_H
+#define PRINT_H
+
 #include "default.h"
 
 namespace slackerz{
@@ -47,17 +50,6 @@ namespace slackerz{
         std::cout << x;
     }
 
-    static void prints(slackerz::list a, string x = ""){
-        if(a.type == "string"){
-            for(int i=0; i < a.v.size(); i++){
-                std::cout << a.v[i] << x;
-            }
-        }else if(a.type == "int"){
-            for(int i=0; i < a.v2.size(); i++){
-                std::cout << a.v2[i] << x;
-            }
-        }
-    }
 
     static void prints(){
         cout << "\n";
@@ -81,3 +73,5 @@ namespace slackerz{
     }
 
 }
+
+#endif
