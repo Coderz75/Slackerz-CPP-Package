@@ -149,7 +149,7 @@ Any of these can transfer any (c++) datatype to the requested type
 Slackerz' string are different from typical strings, they follow this syntax:
 
 ```cpp
-      str mystring("My string's value");
+      str mystring = "My string's value";
 ```
 A known issue with slackerz strings is that sometimes you may get an error similar to "No operator matches this operation" If this happens, do [stringname].v as the value, for example:
 
@@ -167,7 +167,7 @@ You can call them by doing mystring.operation(); An example is
 
 ```cpp
 
-      str Mystr("Hello");
+      str Mystr ="Hello";
       print(Mystr.lower());
 ```
 
@@ -201,15 +201,16 @@ Slackerz string operations are highly based on python operations, so you can sea
 
 <h3>Lists</h3>
 
-Lists are proven to work, but despite being put in the main branch, some functions and calls will be subject to change in later releases
 
 Slackerz lists follows a somewhat similar syntax to it's string, but with a few differences.
 
 Slackerz lists only allows one data type for a list
 
 ```cpp
-      slackerz::list List({"Hello","List"}); //string lists
-      slackerz::list Lisr2({3,5,6}); //integer lists
+      s::list<type> List ={value}; //string lists
+      Ex:
+      s::list<string> = {"Ok","Yeah"};
+      s::list<int> = {3,4,64,};
 ```
 
 As with strings, sometime you may have to put List.v (string lists) or List.v2 (int lists) for it to work
@@ -227,8 +228,7 @@ As with strings, sometime you may have to put List.v (string lists) or List.v2 (
                 void remove(val);// removes all instances of a certain value from a list
                 void clear();//clears the list
 
-                vector<string> copy(); //returns a copy of the list (but just following the v or v2 directions (mentioned above) will do the same thing).
-                //Additional note, if you are using an int list, it would be best for you to put list.copy(1); to make sure u get the right list
+                vector<string> copy(); //returns a copy of the list (but just following the list.v (mentioned above) will do the same thing).
 
                 int count(val); //counts how many instances of a value occurs in a list
 
