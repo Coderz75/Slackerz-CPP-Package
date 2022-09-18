@@ -1,7 +1,7 @@
 #ifndef PRINT_H
 #define PRINT_H
 
-#include "default.h"
+#include "global.h"
 
 namespace slackerz{
     //print
@@ -18,16 +18,6 @@ namespace slackerz{
     }
 
 
-    static void prints(std::vector<string> a, string x=""){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << x;
-    }
-
-
-    static void prints(std::vector<int> a, string x=""){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << x;
-    }
 
     static void prints(int a, string x=""){
         cout << to_string(a);
@@ -54,6 +44,19 @@ namespace slackerz{
     static void prints(){
         cout << "\n";
     }
+	template <typename X>
+    static void prints(std::vector<X> a, string x=""){
+		cout << "{";
+        for(int i=0; i < a.size(); i++){
+			prints(a.at(i));
+			if(i+1 < a.size()) cout<< ", ";
+		}
+		cout << "}";
+	}
+	template <typename X>
+	static void prints(slackerz::list<X> a, string x = ""){
+		prints(a.v);
+	}
     void print() {
         std::cout<<std::endl;
     }

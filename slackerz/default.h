@@ -8,6 +8,7 @@
 #include "functions/print.h"
 #include "classes/random.h"
 #include "classes/global.h"
+#include "functions/global.h"
 
 bool init_called = false;
 using namespace slackerz;

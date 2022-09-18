@@ -3,6 +3,7 @@
 #include <list>
 #include <string>
 #include <algorithm>
+#include <array>
 
 using namespace std;
 
@@ -12,6 +13,14 @@ namespace slackerz{
         class list{
             public:
                 std::vector<T> v;
+
+				template< typename ... Strings>
+				void enterargs(T arg, const Strings&... rest){
+					v.push_back(arg);
+					enterargs(rest...);
+				}
+
+				void enterargs(){};
 
                 list(vector<T> a){
                     v = a;
@@ -24,12 +33,23 @@ namespace slackerz{
                     }
                     v = result;
                 }
+                list(T* a){
+					vector<T> r(a);
+					v = a;
+                }
+				list(){ v = {};}
+				template< typename ... Strings>
+				list(T arg, const Strings&... rest) {
+					v.push_back(arg);
+					enterargs(rest...);
+				}
+
                 operator T () const { // C++ verison of __repr__
             		return v;
         		}
 
                 void append(T val){
-                    v.push_back(val)
+                    v.push_back(val);
                     
                 }
                 void insert(int place, T val){
@@ -38,7 +58,7 @@ namespace slackerz{
                 void extend(slackerz::list<T> x){
                     vector<T> a = x.v;
                     for(int i = 0; i< a.size();i++){
-                            v2.push_back(a[i]);
+                            v.push_back(a[i]);
                     }
 
                 }
