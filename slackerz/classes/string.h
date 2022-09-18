@@ -4,7 +4,6 @@
 #include <string>
 #include <algorithm>
 #include <cstring>
-#include "default.h"
 using namespace std;
 namespace slackerz{
 
@@ -13,6 +12,14 @@ namespace slackerz{
                 string v;
                 str(string s){
                     v = s;
+                }
+                str(char *a){
+				    int i;
+				    string s = "";
+				    for (i = 0; i < sizeof(a); i++) {
+				        s = s + a[i];
+				    }
+				    v = s;
                 }
                 string upper(){
                     string data = v;

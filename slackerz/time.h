@@ -1,10 +1,10 @@
 #ifndef TIME_H
 #define TIME_H
-#include "string.h"
+#include "default.h"
 #include <thread>
 #include <ctime>
 
-string a(){
+static string a(){
       time_t now = time(0);
       string dt = ctime(&now);
       return dt;

@@ -1,4 +1,4 @@
-Version: 1.1
+Version: 1.2
 
 Source: https://github.com/Coderz75/Slackerz-Compiler/tree/main
 

@@ -2,10 +2,13 @@
 #define _DEFAULT_H_
 
 #include <iostream>
-#include "string.h"
-#include "list.h"
+#include "classes/string.h"
+#include "classes/list.h"
 #include <ctime>
-#include "print.h"
+#include "functions/print.h"
+#include "classes/random.h"
+#include "classes/global.h"
+#include "functions/global.h"
 
 bool init_called = false;
 using namespace slackerz;
@@ -15,7 +18,9 @@ using namespace slackerz;
 	#define or ||
 #endif
 
-void x(){
+namespace s = slackerz;
+
+static void x(){
     srand((unsigned) time(0));
 }
 namespace slackerz{
@@ -64,23 +69,6 @@ namespace slackerz{
     int abs(int num){
         return abs(num);
     }
-class random{
-    public:
-        int randint(int num = 99999){
-            try{
-                if(init_called == false){
-                    throw "You need to call init_slackerz() to use random\n";
-                }
-
-                return rand() % num + 0;   
-            }
-            catch(const char* msg){
-                cerr << msg;
-                exit(1);
-            }
-        }
-};
-
 //to int
     template <typename U>
     int toint(U something);

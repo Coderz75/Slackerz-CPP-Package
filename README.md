@@ -5,13 +5,15 @@ This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](./slackerz/docs/LICENSE.md)
 
-<b>THE GUIDE BELOW IS NOT COMPLETE!!</b>
-
-Slackerz is very extensive, so it will taake a while to finish the guide.
 
 # Table of Contents:
 
+[Why Slackerz?](#why)
+
+[Pre-requisites](#prereq)
+
 [Getting started](#start)
+
 
 Packages:
 
@@ -25,6 +27,27 @@ Packages:
 [Credits](#credits)
 
 
+
+<h1 id = "why">Why slackerz?</h1>
+Slackerz is built by Coderz75, with sign of stopping
+
+Slackerz brings to you a plethora of functions, datatypes, and syntax fixes in c++ to make your life easied
+
+Some features include:
+
+1. Common python type functions, such as print(), input() and len()
+2. Custom data types such as list and string
+3. Simple and intuitive syntax
+
+And so much more!
+
+
+<h1 id = "prereq">Pre-requisites</h1>
+Slackerz requires atleast c++11, while preferably the latest version.
+
+Slackerz has been tested on clang+, g++, and msvc, allowing for high compatibility
+
+Slackerz is the most compatible on msvc and g++, but clang should work
 
 <h1 id = "start">Getting started</h1>
 
@@ -149,7 +172,7 @@ Any of these can transfer any (c++) datatype to the requested type
 Slackerz' string are different from typical strings, they follow this syntax:
 
 ```cpp
-      str mystring("My string's value");
+      str mystring = "My string's value";
 ```
 A known issue with slackerz strings is that sometimes you may get an error similar to "No operator matches this operation" If this happens, do [stringname].v as the value, for example:
 
@@ -167,7 +190,7 @@ You can call them by doing mystring.operation(); An example is
 
 ```cpp
 
-      str Mystr("Hello");
+      str Mystr ="Hello";
       print(Mystr.lower());
 ```
 
@@ -201,15 +224,16 @@ Slackerz string operations are highly based on python operations, so you can sea
 
 <h3>Lists</h3>
 
-Lists are proven to work, but despite being put in the main branch, some functions and calls will be subject to change in later releases
 
 Slackerz lists follows a somewhat similar syntax to it's string, but with a few differences.
 
 Slackerz lists only allows one data type for a list
 
 ```cpp
-      slackerz::list List({"Hello","List"}); //string lists
-      slackerz::list Lisr2({3,5,6}); //integer lists
+      s::list<type> List ={value}; //string lists
+      Ex:
+      s::list<string> = {"Ok","Yeah"};
+      s::list<int> = {3,4,64,};
 ```
 
 As with strings, sometime you may have to put List.v (string lists) or List.v2 (int lists) for it to work
@@ -227,8 +251,7 @@ As with strings, sometime you may have to put List.v (string lists) or List.v2 (
                 void remove(val);// removes all instances of a certain value from a list
                 void clear();//clears the list
 
-                vector<string> copy(); //returns a copy of the list (but just following the v or v2 directions (mentioned above) will do the same thing).
-                //Additional note, if you are using an int list, it would be best for you to put list.copy(1); to make sure u get the right list
+                vector<string> copy(); //returns a copy of the list (but just following the list.v (mentioned above) will do the same thing).
 
                 int count(val); //counts how many instances of a value occurs in a list
 

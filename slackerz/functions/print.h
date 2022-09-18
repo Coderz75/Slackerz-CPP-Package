@@ -1,6 +1,11 @@
+#ifndef PRINT_H
+#define PRINT_H
+
+#include "global.h"
+
 namespace slackerz{
     //print
-	#define noend 0111101111
+	string noend = "01101110~%~01101111 01100101~%~01101110~%~01100100 ";
 
     static void prints(std::string a, string x=""){
         std::cout << a;
@@ -13,16 +18,6 @@ namespace slackerz{
     }
 
 
-    static void prints(std::vector<string> a, string x=""){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << x;
-    }
-
-
-    static void prints(std::vector<int> a, string x=""){
-        for(int i=0; i < a.size(); i++)
-        std::cout << a.at(i) << x;
-    }
 
     static void prints(int a, string x=""){
         cout << to_string(a);
@@ -45,30 +40,33 @@ namespace slackerz{
         std::cout << x;
     }
 
-    static void prints(slackerz::list a, string x = ""){
-        if(a.type == "string"){
-            for(int i=0; i < a.v.size(); i++){
-                std::cout << a.v[i] << x;
-            }
-        }else if(a.type == "int"){
-            for(int i=0; i < a.v2.size(); i++){
-                std::cout << a.v2[i] << x;
-            }
-        }
-    }
 
     static void prints(){
         cout << "\n";
     }
+	template <typename X>
+    static void prints(std::vector<X> a, string x=""){
+		cout << "{";
+        for(int i=0; i < a.size(); i++){
+			prints(a.at(i));
+			if(i+1 < a.size()) cout<< ", ";
+		}
+		cout << "}";
+	}
+	template <typename X>
+	static void prints(slackerz::list<X> a, string x = ""){
+		prints(a.v);
+	}
     void print() {
         std::cout<<std::endl;
     }
 
-    void print(int arg) {
+    void print(string arg) {
 		if(arg != noend){
-			prints("using int func");
 			prints(arg);
-		}
+		}else{
+            cout << "\b";
+        }
     }
     template<typename First, typename ... Strings>
     void print(First arg, const Strings&... rest) {
@@ -78,3 +76,5 @@ namespace slackerz{
     }
 
 }
+
+#endif
