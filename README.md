@@ -5,13 +5,15 @@ This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](./slackerz/docs/LICENSE.md)
 
-<b>THE GUIDE BELOW IS NOT COMPLETE!!</b>
-
-Slackerz is very extensive, so it will taake a while to finish the guide.
 
 # Table of Contents:
 
+[Why Slackerz?](#why)
+
+[Pre-requisites](#prereq)
+
 [Getting started](#start)
+
 
 Packages:
 
@@ -25,6 +27,27 @@ Packages:
 [Credits](#credits)
 
 
+
+<h1 id = "why">Why slackerz?</h1>
+Slackerz is built by Coderz75, with sign of stopping
+
+Slackerz brings to you a plethora of functions, datatypes, and syntax fixes in c++ to make your life easied
+
+Some features include:
+
+1. Common python type functions, such as print(), input() and len()
+2. Custom data types such as list and string
+3. Simple and intuitive syntax
+
+And so much more!
+
+
+<h1 id = "prereq">Pre-requisites</h1>
+Slackerz requires atleast c++11, while preferably the latest version.
+
+Slackerz has been tested on clang+, g++, and msvc, allowing for high compatibility
+
+Slackerz is the most compatible on msvc and g++, but clang should work
 
 <h1 id = "start">Getting started</h1>
 
