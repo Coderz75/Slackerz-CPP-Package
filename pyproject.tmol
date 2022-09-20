@@ -1,0 +1,17 @@
+[project]
+name = "Slackerz-cpp-package-Coderz75"
+version = "1.2.0"
+authors = [
+  { name="Nuaym Syed", email="scienceboy75@gmail.com" },
+]
+description = "Slackerz c++ package, which adds a bunch of stuff to c++"
+readme = "README.md"
+license = { file="./slackerz/docs/LICENSE.md" }
+requires-python = ">=3.1"
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Coderz75/Slackerz-CPP-Package"
+"Bug Tracker" = "https://github.com/Coderz75/Slackerz-CPP-Package/issues"
