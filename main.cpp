@@ -1,6 +1,6 @@
 #include "slackerz/default.h"
 
 int main() {
-    init_slackerz();
-    print("Welcome to Slackerz!");}   
+    init_slackerz(0);
+    print("Welcome to Slackerz!");
 }

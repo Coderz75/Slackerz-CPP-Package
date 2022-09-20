@@ -122,7 +122,7 @@ namespace slackerz{
 
     template<typename T>
     int len(T a);
-    template<typname X>
+    template<typename X>
     int len(slackerz::list<X> a){
         return a.v.size();
     }

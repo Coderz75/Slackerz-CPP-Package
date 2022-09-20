@@ -161,6 +161,12 @@ namespace slackerz{
                     }
                     return true;
                 }
+                bool endswith(string suffix){
+                    if (v.length() < suffix.length()) {
+                        return false;
+                    }
+                    return std::equal(suffix.rbegin(), suffix.rend(), v.rbegin());
+                }
                 
         };
 }
