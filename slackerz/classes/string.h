@@ -13,13 +13,8 @@ namespace slackerz{
                 str(string s){
                     v = s;
                 }
-                str(char *a){
-				    int i;
-				    string s = "";
-				    for (i = 0; i < sizeof(a); i++) {
-				        s = s + a[i];
-				    }
-				    v = s;
+                str(char* a){
+                    v = a;
                 }
                 string upper(){
                     string data = v;

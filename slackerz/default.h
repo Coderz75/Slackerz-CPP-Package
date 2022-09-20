@@ -22,6 +22,8 @@ using namespace slackerz;
 
 #if __GNUC__ > 2
 #define fn auto
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wwritable-strings"
 #endif
 
 namespace s = slackerz;
