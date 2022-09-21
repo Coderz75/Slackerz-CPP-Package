@@ -30,7 +30,7 @@ using namespace slackerz;
 namespace s = slackerz;
 
 static void x(){
-    srand((unsigned) time(0));
+    srand((unsigned) std::time(0));
 }
 namespace slackerz{
 
@@ -74,10 +74,6 @@ namespace slackerz{
         init_called = true;
     }
     
-    
-    int abs(int num){
-        return abs(num);
-    }
 //to int
     template <typename U>
     int toint(U something);

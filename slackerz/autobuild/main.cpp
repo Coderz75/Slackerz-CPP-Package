@@ -1,13 +1,13 @@
-#include "..default.h"
-#include "..imports.h"
-#include "..time.h"
-#include "..dev.h"
+#include "../slackerz/default.h"
+#include "../slackerz/imports.h"
+#include "../slackerz/time.h"
+#include "../slackerz/dev.h"
 
 int main (){
     init_slackerz();
     //testing print
     print("Hello","hi",123);
-    print()
+    print();
     //testing input
     str b = input("Hello: ");
     //random
@@ -20,16 +20,16 @@ int main (){
     //string functions
     b.lower();
     b.upper();
-    b.split()
+    b.split();
     b.capitilize();
     b.isupper();
     b.islower();
     b.convstr();
     b.center(10," ");
-    n.zfill(20);
+    b.zfill(20);
     b.swapcase();
-    b.startswith();
-    b.endswith();
+    b.startswith("hello");
+    b.endswith(":");
     //testing list
     s::list<string> x = {"Hello","Testing","123"};
     x.append("yeah");
@@ -38,12 +38,12 @@ int main (){
     x.pop();
     x.count("Hello");
     x.index("Testing");
-    x.reverse()
+    x.reverse();
     x.copy();
-    x.clear()
+    x.clear();
     //testing time
-    time.sleep(1000)
-    time.localtime();
+    s::time.sleep(1000);
+    s::time.localtime();
     //testing imports
     clear();
 }
