@@ -1,4 +1,4 @@
 *.exe
 *.obj
 .vscode
-main.cppp
+main.cpp
