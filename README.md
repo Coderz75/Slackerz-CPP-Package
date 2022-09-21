@@ -81,6 +81,51 @@ You can add the default package by putting
 ```
 At the start of your code
 
+<h3>Syntax stuff</h3>
+
+Slackerz adds alot of syntax variants, but certain versions id dependent on the compiler
+
+On ALL c++ compilers, slackerz offers a var syntax, which allows for the compiler to automatically decide the variable. For example"
+
+```cpp
+	var test = 2;
+```
+This will result in the data type being an int my default
+
+Please note that the var defaults to standard library data types, so you won't be able to use slackerz's custom data types with this.
+
+<br>
+Slackerz also offers for only GNUC BASED COMPILERS (which includes clang++ and g++) a auto return type for functions, fn. As stated below
+
+```cpp
+fn MyFn(){
+	print("COol");
+	return True;
+}
+```
+
+<br>
+
+Slackerz also feature for only MSVC (microsoft visual studio) definitions for or, and, and not, because for some reason they did not work well in the standard library (in my use cases atleast)
+
+They will work as seen below:
+
+```cpp
+	if(5>2 and 3>1){
+		print("Yep");
+	}
+	//result: Yep
+ 	if(5>2 or 3<1){
+		print("Yep");
+	}
+	//result: Yep
+ var a = " ";
+  	if(a not " Hello"){
+		print("Yep");
+	}
+	//result: Yep
+```
+
 <h3>Init Slackerz</h3>
 
 This functions follows the syntax of:
@@ -220,6 +265,7 @@ Slackerz string operations are highly based on python operations, so you can sea
                 string swapcase(); //swaps the case of the string
 
                 bool startswith(string a,optional: int b = 0,Optional: int c = 0); // Checks what does it start with
+                bool endswith(string suffix); // Returns if the string ends with a suffix :-)
 ```
 
 <h3>Lists</h3>

@@ -11,7 +11,7 @@ static string a(){
 }
 
 namespace slackerz{
-  class time{
+  class t{
     public:
       void sleep(int milliseconds){
         std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
@@ -21,6 +21,7 @@ namespace slackerz{
         return a();
       }
   };
+t time;
 }
 
 namespace slackerz{

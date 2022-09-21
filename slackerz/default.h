@@ -18,6 +18,14 @@ using namespace slackerz;
 	#define or ||
 #endif
 
+#define var auto
+
+#if __GNUC__ > 2
+#define fn auto
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wwritable-strings"
+#endif
+
 namespace s = slackerz;
 
 static void x(){
