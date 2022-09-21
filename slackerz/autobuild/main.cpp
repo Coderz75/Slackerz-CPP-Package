@@ -11,7 +11,7 @@ int main(){
     //testing input
     str b = input("Hello: ");
     //random
-    print(random.randint());
+    print(s::random.randint());
     print(abs(-4));
     //conversions
     string z = "3";
