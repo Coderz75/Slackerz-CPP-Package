@@ -1,7 +1,7 @@
-#include "../slackerz/default.h"
-#include "../slackerz/imports.h"
-#include "../slackerz/time.h"
-#include "../slackerz/dev.h"
+#include "default.h"
+#include "imports.h"
+#include "stime.h"
+#include "dev.h"
 
 int main(){
     init_slackerz();
