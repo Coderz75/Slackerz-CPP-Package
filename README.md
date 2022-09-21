@@ -51,26 +51,16 @@ Slackerz is the most compatible on msvc and g++, but clang should work
 
 <h1 id = "start">Getting started</h1>
 
-1. Navigate to this repository at https://github.com/Coderz75/Slackerz-Compiler
+Slackerz uses git for deployment, if you don't have it, you can download git at https://git-scm.com/
 
-2. Click the code button and press download as zip
+1. Simply, open the directory you want to install slackerz in
+2. run the following command: 
 
-3. Extract the zip
-
-The folder labled slackerz is the heart of the program, the rest is just a template. 
-
-If your making a new cpp file, put this in the program:
-```cpp
-      #include "slackerz/default.h"
-      using namespace slackerz;
-
-      int main() {
-      init_slackerz();
-      //The rest of your code here
-      }
+```console
+      git clone https://github.com/Coderz75/Slackerz-CPP-Package.git
 ```
-GET CODING!
-
+3. If you want to, move the folder slackerz into your project
+4. GET CODING!
 <h1 id = "default"> Default Package </h1>
 
 The default package consists of many items. This package is required for slackerz, as many other functions rely on it
