@@ -3,7 +3,7 @@
 #include "../slackerz/time.h"
 #include "../slackerz/dev.h"
 
-int main (){
+int main(){
     init_slackerz();
     //testing print
     print("Hello","hi",123);
