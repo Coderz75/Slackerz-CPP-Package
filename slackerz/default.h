@@ -12,6 +12,7 @@
 
 bool init_called = false;
 using namespace slackerz;
+
 #ifdef _MSC_VER 
 	#define not !=
 	#define and &&
