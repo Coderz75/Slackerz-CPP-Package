@@ -10,9 +10,9 @@
 #include "classes/global.h"
 #include "functions/global.h"
 
-
 bool init_called = false;
 using namespace slackerz;
+
 #ifdef _MSC_VER 
 	#define not !=
 	#define and &&
@@ -23,14 +23,16 @@ using namespace slackerz;
 
 #if __GNUC__ > 2
 #define fn auto
+#if __clang__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wwritable-strings"
+#endif
 #endif
 
 namespace s = slackerz;
 
 static void x(){
-    srand((unsigned) time(0));
+    srand((unsigned) std::time(0));
 }
 namespace slackerz{
 
@@ -74,10 +76,6 @@ namespace slackerz{
         init_called = true;
     }
     
-    
-    int abs(int num){
-        return abs(num);
-    }
 //to int
     template <typename U>
     int toint(U something);

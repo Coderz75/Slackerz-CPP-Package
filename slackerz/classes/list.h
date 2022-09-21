@@ -55,23 +55,13 @@ namespace slackerz{
                 void insert(int place, T val){
                     v.insert(v.begin()+place,val);
                 }
-                void extend(slackerz::list<T> x){
-                    vector<T> a = x.v;
-                    for(int i = 0; i< a.size();i++){
-                            v.push_back(a[i]);
-                    }
 
-                }
                 void extend(std::list<T> list){
                     for (T &c: list) {
                         v.push_back(c);
                     }
                 }
-                void extend(vector<T> a){
-                        for(int i = 0; i< a.size();i++){
-                            v.push_back(a[i]);
-                        }
-                }
+
                 void extend(){}
 
                 template< typename ... Strings>
