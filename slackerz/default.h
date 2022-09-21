@@ -10,7 +10,6 @@
 #include "classes/global.h"
 #include "functions/global.h"
 
-
 bool init_called = false;
 using namespace slackerz;
 #ifdef _MSC_VER 
