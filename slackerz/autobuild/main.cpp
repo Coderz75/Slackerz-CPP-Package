@@ -1,7 +1,7 @@
-#include "default.h"
-#include "imports.h"
-#include "stime.h"
-#include "dev.h"
+#include "../default.h"
+#include "../imports.h"
+#include "../stime.h"
+#include "../dev.h"
 
 int main(){
     init_slackerz();
@@ -14,9 +14,10 @@ int main(){
     print(random.randint());
     print(abs(-4));
     //conversions
+    string z = "3";
     tostring(2);
-    tofloat("2");
-    toint("3");
+    tofloat(z);
+    toint(z);
     //string functions
     b.lower();
     b.upper();
