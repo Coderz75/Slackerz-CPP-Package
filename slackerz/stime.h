@@ -5,7 +5,7 @@
 #include <ctime>
 
 static string a(){
-      time_t now = time(0);
+      time_t now = std::time(0);
       string dt = ctime(&now);
       return dt;
 }
