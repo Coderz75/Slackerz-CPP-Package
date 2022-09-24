@@ -2,3 +2,4 @@
 *.obj
 .vscode
 /main.cpp
+*.out
