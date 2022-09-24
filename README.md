@@ -43,7 +43,7 @@ And so much more!
 
 
 <h1 id = "prereq">Pre-requisites</h1>
-Slackerz requires atleast c++11, while preferably the latest version.
+Slackerz requires atleast c++11 or c++17, while preferably the latest version.
 
 Slackerz has been tested on clang+, g++, and msvc, allowing for high compatibility
 
