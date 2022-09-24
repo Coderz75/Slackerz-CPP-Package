@@ -21,9 +21,9 @@ using namespace slackerz;
 #endif
 
 #define var auto
-
-#if __GNUC__ > 2
 #define fn auto
+#if __GNUC__ > 2
+
 #if __clang__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wwritable-strings"

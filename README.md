@@ -85,7 +85,7 @@ This will result in the data type being an int my default
 Please note that the var defaults to standard library data types, so you won't be able to use slackerz's custom data types with this.
 
 <br>
-Slackerz also offers for only GNUC BASED COMPILERS (which includes clang++ and g++) a auto return type for functions, fn. As stated below
+Slackerz also offers for ALL COMPILERS an auto return type for functions, fn. As stated below
 
 ```cpp
 fn MyFn(){
@@ -93,7 +93,14 @@ fn MyFn(){
 	return True;
 }
 ```
+This lovely fn variable won't work in main() though, as it results as an error
 
+So this won't work
+```cpp
+fn maint(){
+      print("Function") // DON'T TRY THIS!
+}
+```
 <br>
 
 Slackerz also feature for only MSVC (microsoft visual studio) definitions for or, and, and not, because for some reason they did not work well in the standard library (in my use cases atleast)
