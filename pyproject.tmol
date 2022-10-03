@@ -1,0 +1,16 @@
+[project]
+name = "Slackerz_Nuaym_syed"
+version = "0.0.1"
+authors = [
+  { name="Nuaym Syed", email="scienceboy75@gmail.com" },
+]
+description = "Adds so much more to c++"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/coderz75/slackerz-CPP-Package/"
+"Bug Tracker" = "https://github.com/coderz75/slackerz-CPP-Package/issues"
