@@ -64,7 +64,7 @@ jobs:
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
     - run: |
-       g++ .github/workflows/build.cpp
+       g++ ./github/workflows/build.cpp
        ./build
  
 
