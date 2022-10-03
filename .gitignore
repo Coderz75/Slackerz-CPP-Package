@@ -3,5 +3,3 @@
 .vscode
 /main.cpp
 *.out
-/replit.nix
-/.replit
