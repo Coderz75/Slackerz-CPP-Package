@@ -22,13 +22,6 @@ using namespace slackerz;
 
 #define var auto
 #define fn auto
-#if __GNUC__ > 2
-
-#if __clang__
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wwritable-strings"
-#endif
-#endif
 
 namespace s = slackerz;
 
