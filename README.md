@@ -357,11 +357,11 @@ When using this, it is reccomended to turn on sync, or to put init_slackerz(1); 
 It follows this syntax
 
 ```cpp
-      void sleep(int millisecond);
+      void sleep(seconds);
 
 Call it by:
 
-      time.sleep(1000); //To sleep for one second
+      time.sleep(1.5); //To sleep for 1.5 seconds
 
 ```
 <h3>LocalTime</h3>

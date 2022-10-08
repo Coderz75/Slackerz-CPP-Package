@@ -3,3 +3,4 @@
 .vscode
 /main.cpp
 *.out
+/a

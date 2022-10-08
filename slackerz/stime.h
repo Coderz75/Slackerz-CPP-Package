@@ -13,9 +13,13 @@ static string a(){
 namespace slackerz{
   class t{
     public:
-      void sleep(int milliseconds){
+      void sleep(float seconds){
+        int milliseconds = seconds*1000;
         std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-        
+      }
+      void sleep(int seconds){
+        int milliseconds = seconds*1000;
+        std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
       }
       string localtime(){
         return a();
