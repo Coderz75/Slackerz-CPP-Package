@@ -14,10 +14,10 @@ name: "CodeQL"
 on:
   push:
 
-    branches: [ "main" ]
+    branches: [ "Default-test-Libary" ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches: [ "Default-test-Libary" ]
   schedule:
     - cron: '45 2 * * 1'
 
@@ -64,8 +64,7 @@ jobs:
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
     - run: |
-       g++ slackerz/autobuild/main.cpp
- 
+       g++ .github/autobuild/build.cpp
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2

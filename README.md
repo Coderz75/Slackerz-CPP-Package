@@ -1,6 +1,8 @@
 # SLACKERZ!!!!!
 
 
+It has been decided that slackerz is now ARCHIVED and will not be recieving any further updates. It was a fun time working on this project, and I personally as a coder learned a lot from it. However, my school work is working against me spending any time on this, and interests in newer projects also conflicted with this. The "newest" or updated version of slackerz will be part of the (Runlang rsl library)[https://github.com/Coderz75/Runlang/tree/main/run/rsl]. Thank you, and bye!
+
 This is a c++ package that makes c++ (much) easier
 
 This project is licensed underneath the [MIT LICENSE](./slackerz/docs/LICENSE.md)
@@ -43,7 +45,7 @@ And so much more!
 
 
 <h1 id = "prereq">Pre-requisites</h1>
-Slackerz requires atleast c++11, while preferably the latest version.
+Slackerz requires atleast c++11 or c++17, while preferably the latest version.
 
 Slackerz has been tested on clang+, g++, and msvc, allowing for high compatibility
 
@@ -59,17 +61,20 @@ Slackerz uses git for deployment, if you don't have it, you can download git at 
 ```console
       git clone https://github.com/Coderz75/Slackerz-CPP-Package.git
 ```
-3. If you want to, move the folder slackerz into your project
-4. GET CODING!
+3. Move the slackerz folder to you project
+4. Now put this in your code:
+```cpp
+      #include "slackerz/slackerz.h"
+```
+5. Now, to import everything, just type this in:
+```cpp
+      #include s_all
+```
+6. GET CODING
 <h1 id = "default"> Default Package </h1>
 
 The default package consists of many items. This package is required for slackerz, as many other functions rely on it
 
-You can add the default package by putting
-```cpp
-      #include <slackerz/default.h>
-```
-At the start of your code
 
 <h3>Syntax stuff</h3>
 
@@ -85,7 +90,7 @@ This will result in the data type being an int my default
 Please note that the var defaults to standard library data types, so you won't be able to use slackerz's custom data types with this.
 
 <br>
-Slackerz also offers for only GNUC BASED COMPILERS (which includes clang++ and g++) a auto return type for functions, fn. As stated below
+Slackerz also offers for ALL COMPILERS an auto return type for functions, fn. As stated below
 
 ```cpp
 fn MyFn(){
@@ -93,7 +98,14 @@ fn MyFn(){
 	return True;
 }
 ```
+This lovely fn variable won't work in main() though, as it results as an error
 
+So this won't work
+```cpp
+fn maint(){
+      print("Function") // DON'T TRY THIS!
+}
+```
 <br>
 
 Slackerz also feature for only MSVC (microsoft visual studio) definitions for or, and, and not, because for some reason they did not work well in the standard library (in my use cases atleast)
@@ -298,11 +310,8 @@ As with strings, sometime you may have to put List.v (string lists) or List.v2 (
 
 <h1 id = "dev">Developer Package:</h1>
 
-The dev package is pretty small. It gives developer tools that normal coders don't care about. Yuu can add it by putting: THis at the start of your code:
+The dev package is pretty small. It gives developer tools that normal coders don't care about.
 
-```cpp
-      #include "slackerz/dev.h"
-```
 THE DEV PACKAGE DOES NOT INCLUDE THE DEFAULT PACKAGE, You must put the default package header from above to add it.
 
 <h3>Turn off/on sync (beta)</h3>
@@ -319,11 +328,6 @@ You can turn on/off sync with studio (c package) by putting the 1 or 0 in the pa
 
 The things in this package ARE NOT IN PYTHON. Just things that make lafe mcuh easier
 
-Add this by doing: 
-
-```cpp
-      #include "slackerz/imports.h"
-```
 <h3>Clear</h3>
 
 The clear function clears the console/teminal. This works on windows and linux. It may or may not work in MAC OS
@@ -355,11 +359,11 @@ When using this, it is reccomended to turn on sync, or to put init_slackerz(1); 
 It follows this syntax
 
 ```cpp
-      void sleep(int millisecond);
+      void sleep(seconds);
 
 Call it by:
 
-      time.sleep(1000); //To sleep for one second
+      time.sleep(1.5); //To sleep for 1.5 seconds
 
 ```
 <h3>LocalTime</h3>

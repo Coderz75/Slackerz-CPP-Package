@@ -63,7 +63,7 @@ namespace slackerz{
 
     void print(string arg) {
 		if(arg != noend){
-			prints(arg);
+			prints(arg + "\n");
 		}else{
             cout << "\b";
         }

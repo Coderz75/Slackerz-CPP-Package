@@ -10,6 +10,7 @@
 #include "classes/global.h"
 #include "functions/global.h"
 
+
 bool init_called = false;
 using namespace slackerz;
 
@@ -20,14 +21,7 @@ using namespace slackerz;
 #endif
 
 #define var auto
-
-#if __GNUC__ > 2
 #define fn auto
-#if __clang__
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wwritable-strings"
-#endif
-#endif
 
 namespace s = slackerz;
 
