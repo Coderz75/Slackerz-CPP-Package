@@ -1,6 +1,4 @@
-# SLACKERZ!!!!!
-
-
+# Archived
 It has been decided that slackerz is now ARCHIVED and will not be recieving any further updates. It was a fun time working on this project, and I personally as a coder learned a lot from it. However, my school work is working against me spending any time on this, and interests in newer projects also conflicted with this. The "newest" or updated version of slackerz will be part of the (Runlang rsl library)[https://github.com/Coderz75/Runlang/tree/main/run/rsl]. Thank you, and bye!
 
 This is a c++ package that makes c++ (much) easier
@@ -8,6 +6,9 @@ This is a c++ package that makes c++ (much) easier
 This project is licensed underneath the [MIT LICENSE](./slackerz/docs/LICENSE.md)
 
 
+
+
+# SLACKERZ!!!!!
 # Table of Contents:
 
 [Why Slackerz?](#why)
